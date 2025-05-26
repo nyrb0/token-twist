@@ -1,0 +1,14 @@
+.route {
+    // padding-top: 80px+60px;
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    .navigation {
+        width: 100%;
+        padding-bottom: 20px;
+        top: 40px;
+        position: absolute;
+        box-sizing: border-box;
+        z-index: 999;
+    }
+}

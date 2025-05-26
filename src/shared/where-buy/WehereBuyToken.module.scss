@@ -1,0 +1,118 @@
+/// component Card
+
+.where {
+    position: relative;
+    overflow: hidden;
+    .sideLeft {
+        position: absolute;
+        top: 0px;
+        left: -10px;
+    }
+    .sideRight {
+        position: absolute;
+        top: 0px;
+        right: -10px;
+    }
+    .wrapper {
+        min-height: 100%;
+        width: 100%;
+        margin-bottom: 60px;
+        // .bgPattern {
+        //     position: absolute;
+        //     top: 0;
+        //     left: 0;
+        //     width: 100%;
+        //     height: 100%;
+        //     object-fit: cover;
+        //     z-index: 0;
+        //     pointer-events: none;
+        // }
+
+        .header {
+            margin-top: 118px;
+            h2 {
+                margin-bottom: 12px;
+            }
+            strong {
+                font-weight: 700;
+                font-size: 18px;
+                color: #4a4a4a;
+            }
+        }
+        .cards {
+            margin-top: 80px;
+            gap: 12px;
+        }
+        .circles {
+            margin-top: 28px;
+            gap: 10px;
+        }
+        .bottom {
+            margin-top: 138px;
+            p {
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 145%;
+            }
+            span {
+                width: 327px;
+                height: 54px;
+                p {
+                    margin-top: 8px;
+                    font-weight: 700;
+                    line-height: 145%;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+.card {
+    border-bottom: 4px solid #000;
+    border-left: 1px solid #000;
+    border-right: 4px solid #000;
+    border-top: 1px solid #000;
+    background-color: var(--white);
+    border-radius: 16px;
+    padding: 16px;
+    width: 286px;
+    box-sizing: border-box;
+    height: 237px;
+    img {
+        margin-bottom: 32px;
+    }
+    strong {
+        font-family: var(--second-family);
+        font-weight: 400;
+        font-size: 20px;
+        color: #111;
+    }
+    p {
+        font-style: italic;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 145%;
+        margin-top: 8px;
+    }
+}
+
+.circle {
+    padding: 8px;
+    min-width: 80px;
+    max-width: 80px;
+    height: 80px;
+    box-sizing: border-box;
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 32px;
+    color: var(--white);
+    border-radius: 50%;
+}
+.circle_1 {
+    border: 3px dashed var(--normal);
+    color: var(--normal);
+}
+.circle_2 {
+    border: 3px dashed var(--normal);
+    background-color: var(--normal);
+}

@@ -1,0 +1,82 @@
+.header {
+    background: #fff;
+    border-bottom: 6px solid #000;
+    border-left: 1px solid #000;
+    border-right: 4px solid #000;
+    border-top: 1px solid #000;
+    border-radius: 16px;
+    padding: 12px 0 0px 0;
+    width: 100%;
+    height: 72px;
+    box-sizing: border-box;
+    overflow: hidden;
+
+    ul {
+        padding: 0 60px;
+        gap: 10px;
+        width: 100%;
+
+        li {
+            color: var(--gray);
+            font-family: var(--third-family);
+            font-weight: 700;
+            font-size: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+            cursor: pointer;
+            box-sizing: border-box;
+            position: relative;
+            .border {
+                height: 0;
+                opacity: 0;
+                background-color: var(--normal);
+                width: 100%;
+                border-radius: 4px 4px 0 0;
+                transition:
+                    height 0.3s ease,
+                    opacity 0.3s ease;
+                overflow: hidden;
+            }
+            &::after {
+                content: '';
+                position: absolute;
+                top: -15px;
+                right: -28px;
+                z-index: 1;
+                background-color: var(--normal);
+                height: 55px;
+                width: calc(100% + 60px); // вместо padding лучше увеличить ширину
+                border-radius: 10px 10px 0 0;
+
+                // начальное состояние — скрыто и сдвинуто вниз
+                opacity: 0;
+                transform: translateY(50px);
+                transition:
+                    opacity 0.2s ease,
+                    transform 0.2s ease;
+                pointer-events: none; // чтобы не мешал событиям
+            }
+
+            &:active::after {
+                opacity: 1;
+                transform: translateY(5px);
+            }
+
+            &:hover .border {
+                height: 8px;
+                opacity: 1;
+            }
+
+            & span {
+                gap: 5px;
+                position: relative;
+                z-index: 2;
+                display: block;
+                & svg {
+                    transform: translateY(-3px);
+                }
+            }
+        }
+    }
+}

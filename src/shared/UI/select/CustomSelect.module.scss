@@ -1,0 +1,42 @@
+.select {
+    border-bottom: 4px solid #000;
+    border-left: 1px solid #000;
+    border-right: 4px solid #000;
+    border-top: 1px solid #000;
+    border-radius: 16px;
+    padding: 16px 32px 0px 32px;
+    box-sizing: border-box;
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 24px;
+    color: #111;
+    min-height: 65px;
+    position: relative;
+    cursor: pointer;
+
+    transition: padding 0.2s ease-in-out;
+    .selected {
+        padding-bottom: 20px;
+        box-sizing: border-box;
+    }
+    .dropdown {
+        font-size: 16px;
+        font-weight: 600;
+        font-family: var(--font-family);
+        line-height: 145%;
+        color: #4a4a4a;
+        max-height: 0;
+        padding: 0;
+        overflow: hidden;
+        transition:
+            max-height 0.4s ease,
+            padding 0.6s ease;
+    }
+    &.open {
+        .dropdown {
+            max-height: 200px; // установи максимум по нужной высоте
+        }
+
+        padding-bottom: 20px;
+    }
+}

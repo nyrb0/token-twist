@@ -1,0 +1,30 @@
+.hero {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    background-color: gray;
+
+    .board {
+        height: 100%;
+        transform: translate(-13%, 10px);
+
+        & img {
+            object-fit: contain;
+            z-index: 1;
+        }
+        .container {
+            position: relative;
+            .texts {
+                position: absolute;
+                top: 250px;
+                right: 185px;
+                z-index: 2;
+            }
+        }
+    }
+    .chat {
+        position: absolute;
+        bottom: 275px;
+        right: 36px;
+    }
+}

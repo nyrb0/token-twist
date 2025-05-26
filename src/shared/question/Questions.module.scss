@@ -1,0 +1,56 @@
+.faq {
+    position: relative;
+    overflow: hidden;
+    .monkey {
+        position: absolute;
+        left: 0;
+        width: auto;
+        height: 1080px;
+        clip-path: inset(0 20px 0 0); /* сверху врезано на 20px */
+        z-index: 1;
+    }
+    .seaweed {
+        position: absolute;
+        right: 0;
+        width: auto;
+        height: 1080px;
+    }
+    .questions {
+        position: relative;
+        z-index: 9;
+        margin-top: 70px;
+        border-bottom: 4px solid #000;
+        border-left: 1px solid #000;
+        border-right: 4px solid #000;
+        border-top: 1px solid #000;
+        border-radius: 16px;
+        padding: 32px;
+        background-color: white;
+        box-sizing: border-box;
+        width: 100%;
+        height: 820px;
+        margin-bottom: 63px;
+        .header {
+            font-size: 32px;
+            font-weight: 400;
+            font-family: var(--second-family);
+            margin-bottom: 32px;
+            h2 {
+                color: #9747ff;
+            }
+            h3 {
+                font-weight: 400;
+                color: var(--normal);
+            }
+        }
+        .dropdowns {
+            gap: 16px;
+        }
+    }
+}
+.btn {
+    position: relative;
+    z-index: 10;
+    margin-bottom: 63px;
+    max-height: 56px;
+}

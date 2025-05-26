@@ -1,0 +1,88 @@
+.about {
+    padding-top: 80px+60px;
+    position: relative;
+    height: 100%;
+    z-index: 1;
+    padding-bottom: 75px;
+    .background {
+        z-index: -1;
+        position: absolute;
+        top: 36%;
+        width: 100%;
+    }
+    .wrapper {
+        position: relative;
+        z-index: -1;
+
+        p {
+            font-family: var(--font-family);
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 145%;
+            color: #4a4a4a;
+        }
+        .who {
+            gap: 32px;
+        }
+        & p:nth-child(3) {
+            margin-top: 20px;
+            margin-bottom: 32px;
+        }
+        .result {
+            .chart {
+                position: relative;
+                .monkey {
+                    position: absolute;
+                    left: -600px;
+                    top: -30px;
+                    z-index: 999;
+                }
+                margin-top: 16px;
+                width: 100%;
+                max-width: 827px;
+                border-bottom: 4px solid #000;
+                border-left: 1px solid #000;
+                border-right: 4px solid #000;
+                border-top: 1px solid #000;
+                background-color: var(--white);
+                border-radius: 16px;
+                padding: 32px;
+            }
+            .description {
+                font-size: 14px;
+                & h3 {
+                    font-family: var(--second-family);
+                    font-weight: 400;
+                    font-size: 20px;
+                    margin-bottom: 8px;
+                }
+                strong {
+                    font-family: var(--font-family);
+                    font-weight: 700;
+                    line-height: 145%;
+                }
+                ul {
+                    margin-top: 16px;
+                    list-style-type: disc;
+                    list-style-position: inside;
+                    li {
+                        font-weight: 600;
+                        line-height: 145%;
+                    }
+                }
+                .right {
+                    h3 {
+                        color: var(--purple);
+                    }
+                }
+                .left {
+                    h3 {
+                        color: var(--normal);
+                    }
+                }
+                margin-top: 16px;
+                gap: 25px;
+            }
+        }
+    }
+}

@@ -1,0 +1,225 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+body {
+    line-height: 1;
+    color: #ffff;
+    color: var(--gray);
+    font-weight: 600;
+    font-family: var(--font-family);
+}
+ol,
+ul {
+    list-style: none;
+}
+blockquote,
+q {
+    quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+a {
+    text-decoration: none;
+    color: #ffff;
+}
+button {
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
+    outline: none;
+}
+h2 {
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 32px;
+    color: #ff4c00;
+}
+
+.df {
+    display: flex;
+}
+.jcc {
+    justify-content: center;
+}
+.aic {
+    align-items: center;
+}
+.jcsb {
+    justify-content: space-between;
+}
+.jcsa {
+    justify-content: space-around;
+}
+.jce {
+    justify-content: flex-end;
+}
+.fdc {
+    flex-direction: column;
+}
+
+.aie {
+    align-items: flex-end;
+}
+
+.hero {
+    // height: 100vh;
+    height: 1080px;
+    padding-top: 12px;
+    box-sizing: border-box;
+}
+
+.container {
+    margin: 0 auto;
+    width: 1180px;
+}
+
+:root {
+    --base-colors-black-black-40: #999;
+    --black-elements: #0c0a09;
+    --base-colors-black-black-bg: #0c0c0c;
+    --base-colors-black-black-90: #1a1a1a;
+    --normal: #ff4c00;
+    --white: #fff;
+    --purple: #9747ff;
+    --gray: #4a4a4a;
+    --font-family: 'Montserrat', sans-serif;
+    --second-family: 'Russo One', sans-serif;
+    --third-family: 'Tektur', sans-serif;
+}
+
+.masked-fade {
+    display: inline-block;
+
+    /* Маска от левого края направо */
+    -webkit-mask-image: linear-gradient(to right, black 0%, transparent 100%);
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: left top;
+    -webkit-mask-size: 100% 100%; /* это мы анимируем */
+
+    /* fallback цвет */
+    mask-image: linear-gradient(to right, black 0%, transparent 100%);
+    mask-repeat: no-repeat;
+    mask-position: left top;
+    mask-size: 100% 100%;
+
+    overflow: hidden;
+}
+
+.content {
+    background: #007bff;
+    color: white;
+    padding: 20px;
+    font-size: 18px;
+    border-radius: 8px;
+}
