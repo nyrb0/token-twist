@@ -50,8 +50,10 @@ const reviewss: IReviews[] = [
 const Reviews = () => {
     return (
         <div className={styles.review}>
-            <Image className={styles.background1} src={background1} width={500} height={500} alt="token twist" />
-            <Image className={styles.background2} src={background2} width={500} height={500} alt="token twist" />
+            {/* <Image className={styles.background1} src={background1} width={500} height={500} alt="token twist" />
+            <Image className={styles.background2} src={background2} width={500} height={500} alt="token twist" /> */}
+            <div className={styles.background1} />
+            <div className={styles.background2} />
 
             <div className={'container'}>
                 <div className={styles.wrapper}>

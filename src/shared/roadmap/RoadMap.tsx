@@ -35,15 +35,13 @@ const RoadMap = () => {
                             title="Империя Сообщества"
                         />
                         <motion.div
-                            initial={{
-                                // clipPath: 'inset(0 100% 0 0)', // полностью обрезано справа
-                                opacity: 1,
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{
+                                duration: 0.6,
+                                ease: 'easeOut',
+                                delay: 1.3,
                             }}
-                            animate={{
-                                // clipPath: 'inset(0 0% 0 0)', // полностью видно
-                                opacity: 1,
-                            }}
-                            transition={{ duration: 1.2, ease: 'easeOut' }}
                         >
                             <Image width={178} height={147} className={styles.green} src={IconArrowGreen} alt="arrow" />
                         </motion.div>
@@ -60,7 +58,17 @@ const RoadMap = () => {
                             ]}
                             title="Вирусный взлет"
                         />
-                        <Image width={167} height={100} className={styles.blue} src={IconArrowBlue} alt="arrow" />
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{
+                                duration: 0.6,
+                                ease: 'easeOut',
+                                delay: 1.8,
+                            }}
+                        >
+                            <Image width={167} height={100} className={styles.blue} src={IconArrowBlue} alt="arrow" />
+                        </motion.div>
                         <Image className={styles.monkey} src={Monkey} width={549} height={530} alt="twist token" />
                     </div>
                     <div className={styles.block}>
@@ -76,7 +84,17 @@ const RoadMap = () => {
                             ]}
                             title="Империя Сообщества"
                         />
-                        <Image width={135} height={111} className={styles.purble} src={IconArrowPurble} alt="arrow" />
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{
+                                duration: 0.6,
+                                ease: 'easeOut',
+                                delay: 3,
+                            }}
+                        >
+                            <Image width={135} height={111} className={styles.purble} src={IconArrowPurble} alt="arrow" />
+                        </motion.div>
                     </div>
                     <div className={styles.block}>
                         <RoadmapCard
