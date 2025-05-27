@@ -1,6 +1,9 @@
 'use client';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, CartesianGrid, ResponsiveContainer } from 'recharts';
 import styles from './chart.module.scss';
+import CustomTooltip from './CustomToolip';
+import CustomBar from './CustomBar';
+import { useHoveredBar } from './useHoveredBar';
 const data = [
     { name: 'Июнь', purple: 250000, orange: 100000 },
     { name: 'Июль', purple: 600000, orange: 100000 },
@@ -16,40 +19,56 @@ const data = [
 
 const moneyChart = ['10M', '5M', '2M', '1M', '500K', '250K', '100K'];
 const moneyChart2 = ['10K', '100K', '50K', '20K', '250K', '500K', '750K', '1M', '1.5M', '2M'];
-const CustomChart = () => (
-    <>
-        <div className="df aie jcsb">
-            <div className={`${styles.left} df fdc jcsb`}>
-                {moneyChart.map((item) => (
-                    <div key={item}>${item}</div>
-                ))}
-            </div>
-
-            <div style={{ width: '100%' }}>
-                <div className={`${styles.chart} df jcsb`}>
-                    {data.map((item) => (
-                        <div key={item.name}>{item.name}</div>
+const CustomChart = () => {
+    const { hovered, onMouseEnter, onMouseLeave } = useHoveredBar();
+    return (
+        <>
+            <div className="df aie jcsb">
+                <div className={`${styles.left} df fdc jcsb`}>
+                    {moneyChart.map((item) => (
+                        <div key={item}>${item}</div>
                     ))}
                 </div>
 
-                <ResponsiveContainer width="100%" height={280}>
-                    <BarChart data={data} barCategoryGap="0%">
-                        <CartesianGrid strokeDasharray="4 4" />
-                        {/* <XAxis dataKey="name" /> */}
-                        {/* <YAxis tickFormatter={(value) => (value >= 1000000 ? `$${value / 1000000}M` : value >= 1000 ? `$${value / 1000}K` : `$${value}`)} /> */}
-                        {/* <Tooltip formatter={(value) => `$${value.toLocaleString()}`} labelStyle={{ fontWeight: 'bold' }} /> */}
-                        <Bar dataKey="purple" fill="#A259FF" radius={[6, 6, 6, 6]} />
-                        <Bar dataKey="orange" fill="#F24E1E" radius={[6, 6, 6, 6]} />
-                    </BarChart>
-                </ResponsiveContainer>
-            </div>
-        </div>
-        <div className={`${styles.bottom} df jcsb`}>
-            {moneyChart2.map((item) => (
-                <div key={item}>${item}</div>
-            ))}
-        </div>
-    </>
-);
+                <div style={{ width: '100%' }}>
+                    <div className={`${styles.chart} df jcsb`}>
+                        {data.map((item) => (
+                            <div key={item.name}>{item.name}</div>
+                        ))}
+                    </div>
 
+                    <div style={{ position: 'relative' }}>
+                        <CustomTooltip hovered={hovered} data={data} />
+
+                        <ResponsiveContainer width="100%" height={280}>
+                            <BarChart data={data} barCategoryGap="0%">
+                                <CartesianGrid strokeDasharray="4 4" />
+
+                                <Bar
+                                    dataKey="purple"
+                                    fill="#A259FF"
+                                    shape={(props: any) => (
+                                        <CustomBar {...props} index={props.index} dataKey="purple" onHover={onMouseEnter} onLeave={onMouseLeave} />
+                                    )}
+                                />
+                                <Bar
+                                    dataKey="orange"
+                                    fill="#F24E1E"
+                                    shape={(props: any) => (
+                                        <CustomBar {...props} index={props.index} dataKey="orange" onHover={onMouseEnter} onLeave={onMouseLeave} />
+                                    )}
+                                />
+                            </BarChart>
+                        </ResponsiveContainer>
+                    </div>
+                </div>
+            </div>
+            <div className={`${styles.bottom} df jcsb`}>
+                {moneyChart2.map((item) => (
+                    <div key={item}>${item}</div>
+                ))}
+            </div>
+        </>
+    );
+};
 export default CustomChart;

@@ -87,3 +87,34 @@
         }
     }
 }
+
+.navigations {
+    border-bottom: 4px solid #000;
+    border-left: 1px solid #000;
+    border-right: 4px solid #000;
+    border-top: 1px solid #000;
+    box-sizing: border-box;
+    border-radius: 16px;
+    padding: 4px 8px 8px 8px;
+    width: 468px;
+    height: 59px;
+    gap: 8px;
+
+    .buttonNavigation {
+        font-weight: 700;
+        border-radius: 16px;
+        box-sizing: border-box;
+        width: 154px;
+        height: 47px;
+        transition:
+            background-color 0.3s ease,
+            color 0.3s ease;
+        background-color: transparent;
+        color: var(---gray);
+        cursor: pointer;
+    }
+    .active {
+        color: var(--white);
+        background-color: var(--normal);
+    }
+}

@@ -1,4 +1,4 @@
-import { StyledChatBlock } from './chat.styled';
+import styles from './chat.module.scss';
 
 interface IChat {
     name?: string;
@@ -8,10 +8,10 @@ interface IChat {
 
 const Chat = ({ name, message, width }: IChat) => {
     return (
-        <StyledChatBlock style={{ minWidth: width, maxWidth: width }} className="df aic">
+        <div style={{ minWidth: width, maxWidth: width }} className={`${styles.chat} df aic`}>
             <div>
-                <p className="name_chat">{name}:</p>
-                <p className="message_chat">{message}</p>
+                <p className={styles.name_chat}>{name}:</p>
+                <p className={styles.message_chat}>{message}</p>
             </div>
             <svg width="16" height="21" viewBox="0 0 16 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -19,7 +19,7 @@ const Chat = ({ name, message, width }: IChat) => {
                     fill="white"
                 />
             </svg>
-        </StyledChatBlock>
+        </div>
     );
 };
 

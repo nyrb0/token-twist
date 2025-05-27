@@ -1,5 +1,4 @@
-import { StyledButtonAboutNavigation, StyledNavigationAbout } from './about.styled';
-
+import styles from './About.module.scss';
 interface INavigation {
     links: string[];
     value: string;
@@ -8,13 +7,13 @@ interface INavigation {
 
 const Navigation = ({ links, value, onChange }: INavigation) => {
     return (
-        <StyledNavigationAbout className="df  jcsb">
+        <div className={`${styles.navigations} df jcsb`}>
             {links.map((item) => (
-                <StyledButtonAboutNavigation key={item} onClick={() => onChange(item)} isroute={value === item}>
+                <div key={item} onClick={() => onChange(item)} className={`${styles.buttonNavigation} ${value === item && styles.active} df aic jcc`}>
                     {item}
-                </StyledButtonAboutNavigation>
+                </div>
             ))}
-        </StyledNavigationAbout>
+        </div>
     );
 };
 

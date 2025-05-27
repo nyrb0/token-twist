@@ -1,14 +1,33 @@
-import React from 'react';
+'use client';
+
+import React, { useRef } from 'react';
 import styles from './Community.module.scss';
 
 import SocialBlock from './social/SocialBlock';
 import IconsSide from '../icons/IconsSide';
+import { useInView, motion } from 'framer-motion';
 
 const Community = () => {
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true, amount: 0.3 });
     return (
-        <div className={`${styles.community} df`} id="community">
+        <div ref={ref} className={`${styles.community} df`} id="community">
             <div className={styles.sideLeft}>
-                <IconsSide position={'top-left'} />
+                <motion.svg
+                    ref={ref}
+                    width="200"
+                    height="1088"
+                    viewBox="0 0 200 1088"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    initial={{ scaleY: 0, opacity: 0 }}
+                    animate={isInView ? { scaleY: 1, opacity: 1 } : {}}
+                    transition={{ duration: 1.8, ease: 'easeInOut' }}
+                    style={{ transformOrigin: 'top' }}
+                >
+                    <path d="M77.6253 1088H0V0H200L77.6253 1088Z" fill="black" />
+                </motion.svg>
+                {/* <IconsSide position={'top-left'} /> */}
             </div>
 
             <div className={`${styles.wrapper} container`}>
@@ -66,7 +85,21 @@ const Community = () => {
                 </div>
             </div>
             <div className={styles.sideRight}>
-                <IconsSide position={'top-right'} />
+                <motion.svg
+                    ref={ref}
+                    width="200"
+                    height="1088"
+                    viewBox="0 0 200 1088"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    initial={{ scaleY: 0, opacity: 0 }}
+                    animate={isInView ? { scaleY: 1, opacity: 1 } : {}}
+                    transition={{ duration: 1.8, ease: 'easeInOut' }}
+                    style={{ transformOrigin: 'top' }}
+                >
+                    <path d="M122.375 1088H200V0H0L122.375 1088Z" fill="black" />
+                </motion.svg>
+                {/* <IconsSide position={'top-right'} /> */}
             </div>
         </div>
     );

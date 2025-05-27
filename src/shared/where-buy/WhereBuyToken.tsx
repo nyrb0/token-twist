@@ -45,7 +45,21 @@ const WhereBuyToken = () => {
     return (
         <div className={`${styles.where} df`} id="buy-token">
             <div className={styles.sideLeft}>
-                <IconSideLeft position={'bottom-left'} />
+                <motion.svg
+                    ref={ref}
+                    width="200"
+                    height="1088"
+                    viewBox="0 0 200 1088"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    initial={{ scaleY: 0, opacity: 0 }}
+                    animate={isInView ? { scaleY: 1, opacity: 1 } : {}}
+                    transition={{ duration: 1.8, ease: 'easeInOut' }}
+                    style={{ transformOrigin: 'top' }}
+                >
+                    <path d="M77.6253 0H0V909H200L77.6253 0Z" fill="black" />
+                </motion.svg>
+                {/* <IconSideLeft position={'bottom-left'} /> */}
             </div>
             <div ref={ref} className={styles.wrapper}>
                 <div className="container">
@@ -145,7 +159,21 @@ const WhereBuyToken = () => {
                 </div>
             </div>
             <div className={styles.sideRight}>
-                <IconSideLeft position={'bottom-right'} />
+                <motion.svg
+                    ref={ref}
+                    width="200"
+                    height="1088"
+                    viewBox="0 0 200 1088"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    initial={{ scaleY: 0, opacity: 0 }}
+                    animate={isInView ? { scaleY: 1, opacity: 1 } : {}}
+                    transition={{ duration: 1.8, ease: 'easeInOut' }}
+                    style={{ transformOrigin: 'top' }}
+                >
+                    <path d="M122.375 0H200V909H0L122.375 0Z" fill="black" />
+                </motion.svg>
+                {/* <IconSideLeft position={'bottom-right'} /> */}
             </div>
         </div>
     );
