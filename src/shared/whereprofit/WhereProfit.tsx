@@ -3,11 +3,11 @@ import ProfitCard from './ProfitCard';
 import Image from 'next/image';
 import grow from './image/grow.svg';
 import Monkey from './image/monkey.png';
-import ProcentCircle from './ProcentCircle';
 import { useState } from 'react';
+import ScheduleCircle from './Circle/ScheduleCircle';
 
 const WhereProfit = () => {
-    const [isActive, setIsActive] = useState('');
+    const [isActive, setIsActive] = useState<null | number>(null);
     return (
         <div className={styles.content}>
             <Image className={styles.grow} src={grow} width={500} height={500} alt="token twist" />
@@ -19,50 +19,52 @@ const WhereProfit = () => {
                         <div className={`${styles.left} df fdc`}>
                             <ProfitCard
                                 color="#9747ff"
-                                isActive={isActive === 'purple'}
-                                onMouseEnter={() => setIsActive('purple')}
-                                onMouseLeave={() => setIsActive('')}
+                                isActive={isActive === 0}
+                                onMouseEnter={() => setIsActive(0)}
+                                onMouseLeave={() => setIsActive(null)}
                             >
                                 <h4>Стейкинг & Награды</h4>
                                 <p>Держите — получайте</p>
                                 <p>Или не получайте. Риски есть</p>
                             </ProfitCard>
                             <ProfitCard
-                                onMouseEnter={() => setIsActive('orange')}
-                                onMouseLeave={() => setIsActive('')}
+                                onMouseEnter={() => setIsActive(1)}
+                                onMouseLeave={() => setIsActive(null)}
                                 color="#ff4c00"
-                                isActive={isActive === 'orange'}
+                                isActive={isActive === 1}
                             >
                                 <h4>Команда & Разработка</h4>
                                 <p>Вестятся 2 года. Если мы не выведем всё в рандомный shitcoin — вы получите свои TWT.</p>
                             </ProfitCard>
                         </div>
-                        <ProcentCircle />
+                        <div className={`${styles.circle} df jcc`}>
+                            <ScheduleCircle index={isActive} setIndex={(index) => setIsActive(index)} />
+                        </div>
                         <div className={`${styles.right} df fdc`}>
                             <ProfitCard
-                                onMouseEnter={() => setIsActive('green')}
-                                onMouseLeave={() => setIsActive('')}
+                                onMouseEnter={() => setIsActive(2)}
+                                onMouseLeave={() => setIsActive(null)}
                                 color="#008791"
-                                isActive={isActive === 'green'}
+                                isActive={isActive === 2}
                             >
                                 <h4> Публичная продажа</h4>
                                 <p>Купили те, кто поверил в нас раньше всех. Или просто FOMOнули.</p>
                             </ProfitCard>
                             <ProfitCard
-                                onMouseEnter={() => setIsActive('red')}
-                                onMouseLeave={() => setIsActive('')}
+                                onMouseEnter={() => setIsActive(3)}
+                                onMouseLeave={() => setIsActive(null)}
                                 color="#be008f"
-                                isActive={isActive === 'red'}
+                                isActive={isActive === 3}
                             >
                                 <h4>Ликвидность & Биржи</h4>
                                 <p>Чтобы курс не упал на 90% за 5 минут (но это не гарантия)</p>
                                 <p></p>
                             </ProfitCard>
                             <ProfitCard
-                                onMouseEnter={() => setIsActive('blue')}
-                                onMouseLeave={() => setIsActive('')}
+                                onMouseEnter={() => setIsActive(4)}
+                                onMouseLeave={() => setIsActive(null)}
                                 color="#042bee"
-                                isActive={isActive === 'blue'}
+                                isActive={isActive === 4}
                             >
                                 <h4>Маркетинг & Партнёрства</h4>
                                 <p>Заливаем рекламу везде,</p>
