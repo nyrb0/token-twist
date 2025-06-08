@@ -14,11 +14,22 @@
         }
         .container {
             position: relative;
+
             .texts {
                 position: absolute;
                 top: 250px;
                 right: 185px;
                 z-index: 2;
+            }
+            @media (max-width: 1500px) {
+                bottom: -75px;
+                & img {
+                    width: 800px;
+                }
+                .texts {
+                    right: 142px;
+                    top: 304px;
+                }
             }
         }
     }
@@ -31,7 +42,6 @@
 
 .infoBoard {
     width: 670px;
-
     h1 {
         font-family: var(--second-family);
         font-weight: 400;
@@ -76,5 +86,34 @@
         height: 54px;
         margin-top: 32px;
         background: #000;
+    }
+    @media (max-width: 1500px) {
+        width: 500px;
+        .square {
+            font-size: 14px;
+            margin-top: 25px;
+            height: 40px;
+        }
+        .boardButton {
+            margin-top: 25px;
+            height: 45px;
+            button {
+                font-size: 14px !important;
+            }
+        }
+        h1 {
+            font-size: 27px;
+        }
+        h2 {
+            font-size: 18px;
+            margin-top: 13px;
+        }
+        h3 {
+            margin-top: 13px;
+            font-size: 18px;
+        }
+        p {
+            font-size: 14px;
+        }
     }
 }

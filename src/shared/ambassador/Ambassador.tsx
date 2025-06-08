@@ -12,7 +12,7 @@ const Ambassador = () => {
                     <p>Тот кто с нами с самого начала. Тот кто всегда будет за нас и тот кому мы доверяем больше всего!</p>
                     <div className={`${styles.content} df `}>
                         <div className={styles.right}>
-                            <div className={`${styles.block}`} style={{ width: 780, height: '100%' }}></div>
+                            <div className={`${styles.block} ${styles.owner}`}></div>
                         </div>
                         <div className={`${styles.left} df fdc`}>
                             <div className={styles.block}></div>

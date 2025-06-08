@@ -1,8 +1,9 @@
 .community {
-    padding-top: 80px+60px;
-    box-sizing: border-box;
     position: relative;
     overflow: hidden;
+    padding-top: 80px+60px;
+    box-sizing: border-box;
+
     .sideLeft {
         position: absolute;
         top: 0px;
@@ -16,11 +17,13 @@
     .wrapper {
         margin-bottom: 97px;
         position: relative;
+        padding: 0 20px;
 
-        strong {
+        h4 {
             font-family: var(--second-family);
             font-size: 24px;
             color: #111;
+            font-weight: 400;
         }
         p {
             margin-top: 10px;
@@ -35,15 +38,49 @@
             grid-template-columns: repeat(2, 1fr);
             gap: 16px;
         }
+        @media (max-width: 860px) {
+            p {
+                font-size: 16px;
+                font-weight: 600;
+            }
+            h4 {
+                font-size: 22px;
+            }
+            .blocks {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+    }
+
+    @media (max-width: 1660px) {
+        .sideRight {
+            right: -40px !important;
+        }
+        .sideLeft {
+            left: -40px !important;
+        }
+    }
+    @media (max-width: 1500px) {
+    }
+
+    @media (max-width: 1248px) {
+        visibility: visible;
+        .sideRight {
+            display: none;
+        }
+        .sideLeft {
+            display: none;
+        }
     }
 }
 
 .socialBlock {
     border: 2px solid #6c52e8;
+    background-color: #fff;
     border-radius: 16px;
     padding: 32px 32px 16px 32px;
-    min-width: 582px;
-    height: 360px;
+    max-width: 582px;
+    min-height: 360px;
     box-sizing: border-box;
     h4 {
         font-family: var(--second-family);
@@ -75,5 +112,60 @@
     button {
         margin-top: 32px;
         height: 54px;
+    }
+
+    @media (max-width: 1500px) {
+        padding: 22px 22px 10px 22px;
+        max-width: none;
+        width: 100%;
+        min-height: 210px;
+        h4 {
+            font-size: 28px;
+            margin-bottom: 16px;
+        }
+        p {
+            &:first-child {
+                margin-top: 8px;
+            }
+        }
+        .texts {
+            p {
+                font-size: 14px !important;
+            }
+        }
+        strong {
+            font-size: 18px !important;
+        }
+        button {
+            width: 100%;
+            height: 45px;
+            font-size: 15px;
+        }
+    }
+    @media (max-width: 920px) {
+        padding: 15px 15px 10px 15px;
+        h4 {
+            font-size: 25px;
+        }
+        strong {
+            font-size: 14px !important;
+        }
+
+        .texts {
+            p {
+                font-size: 12px !important;
+            }
+        }
+
+        button {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 40px;
+            font-size: 14px;
+        }
+    }
+    @media (max-width: 720px) {
     }
 }

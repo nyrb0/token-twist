@@ -50,10 +50,12 @@ const Question = () => {
                         <h2>Все еще есть вопросы?</h2>
                         <h3>FAQ по $TWIST</h3>
                     </div>
-                    <div className={`${styles.dropdowns} df fdc`}>
-                        {options.map((item, i) => (
-                            <CustomSelect key={i} option={item} number={i + 1} />
-                        ))}
+                    <div className={styles.blocks}>
+                        <div className={`${styles.dropdowns} df fdc`}>
+                            {options.map((item, i) => (
+                                <CustomSelect key={i} option={item} number={i + 1} />
+                            ))}
+                        </div>
                     </div>
                 </div>
                 <Button className={styles.btn}>Купить сейчас</Button>

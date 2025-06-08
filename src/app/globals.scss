@@ -171,6 +171,9 @@ h2 {
 .aie {
     align-items: flex-end;
 }
+.ais {
+    align-items: flex-start;
+}
 
 .hero {
     // height: 100vh;
@@ -181,7 +184,10 @@ h2 {
 
 .container {
     margin: 0 auto;
-    width: 1180px;
+    max-width: 1180px;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 
 :root {

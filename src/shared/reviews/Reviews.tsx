@@ -1,7 +1,4 @@
-import Image from 'next/image';
 import styles from './Review.module.scss';
-import background1 from './images/background1.svg';
-import background2 from './images/background2.svg';
 import ReviewCard, { IReviews } from './ReviewCard';
 import { Button } from '../UI/button/Button';
 

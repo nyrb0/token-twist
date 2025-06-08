@@ -3,8 +3,7 @@
     padding-top: 80px+60px;
     box-sizing: border-box;
     height: 100%;
-    height: 920px;
-    overflow: hidden;
+    padding-bottom: 222px;
     .wrapper {
         h4 {
             font-family: var(--second-family);
@@ -18,6 +17,14 @@
             font-weight: 700;
             font-size: 18px;
             line-height: 145%;
+        }
+        @media (max-width: 860px) {
+            p {
+                font-size: 14px;
+            }
+            h4 {
+                font-size: 20px;
+            }
         }
 
         .content {
@@ -39,6 +46,16 @@
             .left {
                 gap: 30px;
             }
+            .owner {
+                width: 700px;
+                height: 100%;
+            }
+            @media (max-width: 1500px) {
+                justify-content: center;
+                .owner {
+                    width: 450px;
+                }
+            }
         }
     }
 
@@ -49,6 +66,7 @@
         z-index: 10;
     }
     .background {
+        display: none;
         position: absolute;
         left: 50px;
         bottom: 0;

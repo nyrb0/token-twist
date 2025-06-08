@@ -2,7 +2,7 @@
 
 .where {
     position: relative;
-    overflow: hidden;
+
     .sideLeft {
         position: absolute;
         height: 100vh;
@@ -19,6 +19,16 @@
         min-height: 100%;
         width: 100%;
         margin-bottom: 60px;
+        // .bgPattern {
+        //     position: absolute;
+        //     top: 0;
+        //     left: 0;
+        //     width: 100%;
+        //     height: 100%;
+        //     object-fit: cover;
+        //     z-index: 0;
+        //     pointer-events: none;
+        // }
 
         .header {
             margin-top: 118px;
@@ -38,7 +48,6 @@
         .circles {
             margin-top: 28px;
             gap: 8px;
-            padding: 0 120px;
         }
         .bottom {
             gap: 30px;
@@ -88,7 +97,6 @@
     }
 
     @media (max-width: 1248px) {
-        overflow: visible;
         .sideRight {
             display: none;
         }
@@ -97,7 +105,7 @@
         }
         .wrapper {
             .circles {
-                padding: 0 80px;
+                padding: 0;
             }
         }
 
@@ -154,23 +162,6 @@
             height: 40px;
         }
     }
-    @media (max-width: 910px) {
-        padding: 8px;
-        height: 237px-80px;
-        p {
-            font-size: 12px;
-            margin-top: 5px;
-        }
-        strong {
-            line-height: 120%;
-            font-size: 14px !important;
-        }
-        img {
-            margin-bottom: 15px;
-            width: 39px;
-            height: 30px;
-        }
-    }
 }
 
 .circle {
@@ -184,12 +175,6 @@
     font-size: 32px;
     color: var(--white);
     border-radius: 50%;
-    @media (max-width: 910px) {
-        min-width: 60px;
-        max-width: 60px;
-        height: 60px;
-        font-size: 24px;
-    }
 }
 .circle_1 {
     border: 3px dashed var(--normal);

@@ -1,59 +1,139 @@
-.circle {
-    // background-color: black;
+.wrapper {
+    position: relative;
+    .logo {
+        position: absolute;
+        left: 100px;
+        top: 100px;
+    }
+    .circle {
+        overflow: visible;
 
-    overflow: visible;
-    // .purple,
-    // .green,
-    // .pink,
-    // .orange,
-    // .blue {
-    //     transition: transform 0.3s ease;
-    //     transform-origin: center;
-    //     cursor: pointer;
+        .scale {
+            transition:
+                transform 0.3s ease,
+                filter 0.6s ease;
+            transform-origin: center;
+            cursor: pointer;
+        }
 
-    //     &:hover {
-    //         transform: scale(1.05);
-    //         filter: drop-shadow(0 0 10px #042bee);
-    //     }
-    // }
+        .activeBlue,
+        .activePink,
+        .activeOrange,
+        .activePurple,
+        .activeGreen {
+            transform: scale(1.1);
+        }
 
-    .scale {
-        transition:
-            transform 0.3s ease,
-            filter 0.6s ease;
-        transform-origin: center;
-        cursor: pointer;
-    }
-    .activeBlue {
-        transform: scale(1.12);
-        filter: drop-shadow(0 0 10px #042bee);
-    }
-    .activePink {
-        transform: scale(1.12);
-        filter: drop-shadow(0 0 10px #be008f);
-    }
-    .activeOrange {
-        transform: scale(1.12);
-        filter: drop-shadow(0 0 10px #ff4c00);
-    }
-    .activePurple {
-        transform: scale(1.12);
-        filter: drop-shadow(0 0 10px #9747ff);
-    }
-    .activeGreen {
-        transform: scale(1.12);
-        filter: drop-shadow(0 0 10px #008791);
+        .activeBlue {
+            filter: drop-shadow(0 0 5px #042bee);
+        }
+        .activePink {
+            filter: drop-shadow(0 0 5px #be008f);
+        }
+        .activeOrange {
+            filter: drop-shadow(0 0 5px #ff4c00);
+        }
+        .activePurple {
+            filter: drop-shadow(0 0 5px #9747ff);
+        }
+        .activeGreen {
+            filter: drop-shadow(0 0 5px #008791);
+        }
+
+        .item {
+            position: relative;
+
+            .procent {
+                font-family: var(--font-family);
+                font-weight: 700;
+                font-size: 24px;
+                line-height: 145%;
+                color: #be008f;
+                transform: rotate(15deg);
+            }
+        }
     }
 
-    .item {
-        position: relative;
-        .procent {
-            font-family: var(--font-family);
-            font-weight: 700;
-            font-size: 24px;
-            line-height: 145%;
-            color: #be008f;
-            transform: rotate(15deg);
+    .procentBlue,
+    .procentOrange,
+    .procentGreen,
+    .procentPink,
+    .procentPurple {
+        position: absolute;
+        font-family: var(--font-family);
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 145%;
+        @media (max-width: 480px) {
+            font-size: 18px;
+        }
+    }
+
+    .procentBlue {
+        rotate: -53deg;
+        bottom: 185px;
+        right: 53px;
+        color: #042bee;
+    }
+    .procentOrange {
+        bottom: 160px;
+        rotate: 49deg;
+        left: 68px;
+        color: #ff4c00;
+    }
+    .procentGreen {
+        top: 55px;
+        right: 105px;
+        rotate: 28deg;
+        color: #008791;
+    }
+    .procentPink {
+        top: 130px;
+        right: 43px;
+        rotate: 64deg;
+        color: #be008f;
+    }
+    .procentPurple {
+        top: 55px;
+        left: 117px;
+        color: #9747ff;
+        rotate: -32deg;
+    }
+    @media (max-width: 480px) {
+        .circle {
+            width: 330px;
+            height: 332px;
+        }
+        .logo {
+            top: 83px;
+            left: 82px;
+            width: 165px;
+            height: 165px;
+        }
+        .procentBlue {
+            bottom: 230px;
+            right: 53px;
+            rotate: -46deg;
+        }
+        .procentOrange {
+            bottom: 220px;
+            left: 60px;
+            rotate: -3deg;
+        }
+        .procentPurple {
+            top: 48px;
+            left: 93px;
+            rotate: -4deg;
+        }
+        .procentGreen {
+            top: 50px;
+            right: 95px;
+            rotate: 3deg;
+        }
+        .procentPink {
+            top: 115px;
+            right: 40px;
+            rotate: 5deg;
         }
     }
 }

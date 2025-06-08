@@ -8,6 +8,7 @@ import ScheduleCircle from './Circle/ScheduleCircle';
 
 const WhereProfit = () => {
     const [isActive, setIsActive] = useState<null | number>(null);
+
     return (
         <div className={styles.content}>
             <Image className={styles.grow} src={grow} width={500} height={500} alt="token twist" />
@@ -15,7 +16,8 @@ const WhereProfit = () => {
             <div className="container">
                 <div className={`${styles.whereprofit}`}>
                     <Image className={styles.monkey} src={Monkey} width={624} height={564} alt="token twist" />
-                    <div className="df jcsb">
+
+                    <div className="df jcsb" style={{ gap: 8 }}>
                         <div className={`${styles.left} df fdc`}>
                             <ProfitCard
                                 color="#9747ff"
@@ -72,7 +74,7 @@ const WhereProfit = () => {
                             </ProfitCard>
                         </div>
                     </div>
-                    <div className="df jce">
+                    <div className={`${styles.wrapperToken} df jce`}>
                         <div className={`${styles.token}`}>
                             <h3>$TWIST — это токен, который</h3>
                             <ul>
@@ -83,6 +85,31 @@ const WhereProfit = () => {
                         </div>
                     </div>
                 </div>
+            </div>
+            <div className={styles.mobile}>
+                <ProfitCard color="#9747ff" isActive={isActive === 0} onMouseEnter={() => setIsActive(0)} onMouseLeave={() => setIsActive(null)}>
+                    <h4>Стейкинг & Награды</h4>
+                    <p>Держите — получайте</p>
+                    <p>Или не получайте. Риски есть</p>
+                </ProfitCard>
+                <ProfitCard onMouseEnter={() => setIsActive(1)} onMouseLeave={() => setIsActive(null)} color="#ff4c00" isActive={isActive === 1}>
+                    <h4>Команда & Разработка</h4>
+                    <p>Вестятся 2 года. Если мы не выведем всё в рандомный shitcoin — вы получите свои TWT.</p>
+                </ProfitCard>
+                <ProfitCard onMouseEnter={() => setIsActive(2)} onMouseLeave={() => setIsActive(null)} color="#008791" isActive={isActive === 2}>
+                    <h4> Публичная продажа</h4>
+                    <p>Купили те, кто поверил в нас раньше всех. Или просто FOMOнули.</p>
+                </ProfitCard>
+                <ProfitCard onMouseEnter={() => setIsActive(3)} onMouseLeave={() => setIsActive(null)} color="#be008f" isActive={isActive === 3}>
+                    <h4>Ликвидность & Биржи</h4>
+                    <p>Чтобы курс не упал на 90% за 5 минут (но это не гарантия)</p>
+                    <p></p>
+                </ProfitCard>
+                <ProfitCard onMouseEnter={() => setIsActive(4)} onMouseLeave={() => setIsActive(null)} color="#042bee" isActive={isActive === 4}>
+                    <h4>Маркетинг & Партнёрства</h4>
+                    <p>Заливаем рекламу везде,</p>
+                    <p>где дадут. Даже в подъездах</p>
+                </ProfitCard>
             </div>
         </div>
     );

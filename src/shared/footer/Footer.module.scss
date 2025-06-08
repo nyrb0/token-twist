@@ -1,0 +1,82 @@
+.footer {
+    padding: 80px 0 93px 0;
+    .wrapper {
+        border-bottom: 4px solid #000;
+        border-left: 1px solid #000;
+        border-right: 4px solid #000;
+        border-top: 1px solid #000;
+        border-radius: 16px;
+        padding: 32px;
+        max-width: 1180px;
+        width: 100%;
+        height: 367px;
+        padding: 32px;
+        box-sizing: border-box;
+        gap: 8px;
+
+        .navigations {
+            button {
+                font-family: var(--third-family);
+                font-weight: 700;
+                font-size: 20px;
+                color: #4a4a4a;
+                cursor: pointer;
+                position: relative;
+                padding: 8px 32px;
+                overflow: hidden;
+                box-sizing: border-box;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    height: 0;
+                    opacity: 0;
+                    background-color: var(--normal);
+                    width: 100%;
+                    border-radius: 4px 4px 0 0;
+                    transition:
+                        height 0.3s ease,
+                        opacity 0.3s ease;
+                    z-index: -1;
+                }
+
+                &:hover::after {
+                    height: 8px;
+                    opacity: 1;
+                }
+                &:active::after {
+                    height: 40px;
+                }
+            }
+            gap: 20px;
+            .column {
+                gap: 42px;
+            }
+        }
+        .socials {
+            gap: 8px;
+            .social {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                font-family: var(--second-family);
+                font-size: 32px;
+                font-weight: 400;
+
+                &:nth-child(1) {
+                    color: #6c52e8;
+                }
+                &:nth-child(2) {
+                    color: #69a0ea;
+                }
+                &:nth-child(3) {
+                    color: #000;
+                }
+                &:nth-child(4) {
+                    color: #608ce6;
+                }
+            }
+        }
+    }
+}

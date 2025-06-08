@@ -1,5 +1,5 @@
 'use client';
-import { useState, useRef, useEffect } from 'react';
+import { useState } from 'react';
 import styles from './CustomSelect.module.scss';
 import IconArrow from '@/shared/icons/IconArrow';
 
@@ -14,24 +14,10 @@ interface CustomSelectProps {
 }
 
 const CustomSelect: React.FC<CustomSelectProps> = ({ option, number }) => {
-    const [isOpen, setIsOpen] = useState(false);
-    const selectRef = useRef<HTMLDivElement>(null);
-
-    const handleClickOutside = (e: MouseEvent) => {
-        if (selectRef.current && !selectRef.current.contains(e.target as Node)) {
-            setIsOpen(false);
-        }
-    };
-
-    useEffect(() => {
-        document.addEventListener('mousedown', handleClickOutside);
-        return () => document.removeEventListener('mousedown', handleClickOutside);
-    }, []);
-
-    // const selectedLabel = options.find((option) => option.value === value)?.label || placeholder;
+    const [isOpen, setIsOpen] = useState(number === 1 ? true : false);
 
     return (
-        <div className={`${styles.select} ${isOpen ? styles.open : ''}`} ref={selectRef}>
+        <div className={`${styles.select} ${isOpen ? styles.open : ''}`}>
             <div className={`${styles.selected} df jcsb`} onClick={() => setIsOpen((prev) => !prev)}>
                 {number}. {option.value}
                 <span className={styles.arrow}>

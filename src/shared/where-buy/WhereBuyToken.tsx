@@ -11,7 +11,7 @@ import Circle from './Circle';
 import IconArrow from './Icons/IconArrow';
 import { Button } from '../UI/button/Button';
 import IconLineDash from './Icons/IconLineDash';
-import IconSideLeft from '../icons/IconsSide';
+
 import { motion, useInView } from 'framer-motion';
 
 const cards = [
@@ -40,10 +40,12 @@ const cards = [
 const WhereBuyToken = () => {
     const ref = useRef(null);
     const refStep = useRef(null);
+    const refCard = useRef(null);
     const isInView = useInView(ref, { once: true, amount: 0.5 }); // once — анимация только один раз
+    const isViewCard = useInView(ref, { once: true, amount: 0.5 }); // once — анимация только один раз
     const step = useInView(refStep, { once: true, amount: 0.5 }); // once — анимация только один раз
     return (
-        <div className={`${styles.where} df`} id="buy-token">
+        <div ref={ref} className={`${styles.where} df`} id="buy-token">
             <div className={styles.sideLeft}>
                 <motion.svg
                     ref={ref}
@@ -59,26 +61,24 @@ const WhereBuyToken = () => {
                 >
                     <path d="M77.6253 0H0V909H200L77.6253 0Z" fill="black" />
                 </motion.svg>
-                {/* <IconSideLeft position={'bottom-left'} /> */}
             </div>
-            <div ref={ref} className={styles.wrapper}>
+            <div className={styles.wrapper}>
                 <div className="container">
                     <div className={styles.header}>
                         <h2>Как купить нашу монету?</h2>
                         <strong>Чтобы потом плакаться!</strong>
                     </div>
-
                     <motion.div
-                        className={`${styles.cards} df`}
+                        ref={refCard}
+                        className={`${styles.cards} df jcsb`}
                         initial={{ opacity: 0, y: 50 }}
-                        animate={isInView ? { opacity: 1, y: 0 } : {}}
+                        animate={isViewCard ? { opacity: 1, y: 0 } : {}}
                         transition={{ duration: 0.6, ease: 'easeOut' }}
                     >
                         {cards.map((item, i) => (
                             <CardHowBuy key={i} description={item.description} icon={item.icon} title={item.title} />
                         ))}
                     </motion.div>
-
                     <div className={`${styles.circles} df jcsa aic`} ref={refStep}>
                         <motion.div
                             initial={{ opacity: 0 }}
@@ -122,7 +122,6 @@ const WhereBuyToken = () => {
                         >
                             <IconLineDash />
                         </motion.div>
-
                         <motion.div
                             initial={{ opacity: 0 }}
                             animate={step ? { opacity: 1 } : {}}
@@ -173,7 +172,6 @@ const WhereBuyToken = () => {
                 >
                     <path d="M122.375 0H200V909H0L122.375 0Z" fill="black" />
                 </motion.svg>
-                {/* <IconSideLeft position={'bottom-right'} /> */}
             </div>
         </div>
     );

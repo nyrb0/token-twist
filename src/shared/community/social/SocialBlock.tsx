@@ -1,8 +1,8 @@
 import styles from '../Community.module.scss';
 import { Button } from '@/shared/UI/button/Button';
-import IconDiscord from './icons/IconDiscord';
-import IconTelegtam from './icons/IconTelegtam';
-import IconTwitter from './icons/IconTwitter';
+import IconDiscord from '../../icons/IconDiscord';
+import IconTelegtam from '../../icons/IconTelegtam';
+import IconTwitter from '../../icons/IconTwitter';
 import Link from 'next/link';
 const icons = {
     discord: <IconDiscord />,
@@ -34,7 +34,7 @@ const SocialBlock = ({ descs, title, strong, icon, href }: ISocialBlock) => {
             <div>
                 <div style={{ gap: 12 }} className="df">
                     {icons[icon]}
-                    <h4 style={{ color: colors() }}>{title}</h4>
+                    <h4 style={{ color: colors(), transform: 'translateY(3px)' }}>{title}</h4>
                 </div>
                 <strong>{strong}</strong>
                 <div className={`${styles.texts} df fdc`}>

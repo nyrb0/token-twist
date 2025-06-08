@@ -28,7 +28,7 @@ const RouteComminity = () => {
     return (
         <div className={styles.route}>
             <div className={`${styles.navigation} df jcc `}>
-                <div className="container df jcsb aic">
+                <div className={`${styles.wrapper} container df jcsb aic`}>
                     <h2>{routes()}</h2>
                     <Navigation links={pages} value={current} onChange={(value) => setCurrent(value)} />
                 </div>

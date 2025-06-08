@@ -4,6 +4,7 @@ import styles from './chart.module.scss';
 import CustomTooltip from './CustomToolip';
 import CustomBar from './CustomBar';
 import { useHoveredBar } from './useHoveredBar';
+import { useWindowSize } from '@/shared/hooks/useWindowSize';
 const data = [
     { name: 'Июнь', purple: 250000, orange: 100000 },
     { name: 'Июль', purple: 600000, orange: 100000 },
@@ -21,6 +22,11 @@ const moneyChart = ['10M', '5M', '2M', '1M', '500K', '250K', '100K'];
 const moneyChart2 = ['10K', '100K', '50K', '20K', '250K', '500K', '750K', '1M', '1.5M', '2M'];
 const CustomChart = () => {
     const { hovered, onMouseEnter, onMouseLeave } = useHoveredBar();
+    const screenSize = useWindowSize();
+    const chartHeight = () => {
+        if (screenSize > 1500) return 280;
+        else if (screenSize > 720) return 230;
+    };
     return (
         <>
             <div className="df aie jcsb">

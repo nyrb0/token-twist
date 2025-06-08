@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-export function AnimatedPercentage({ target = 100, duration = 2000 }) {
+export function AnimatedPercentage({ target = 100, duration = 2000, isActive = true }) {
     const [percent, setPercent] = useState(0);
 
     useEffect(() => {
@@ -19,7 +19,7 @@ export function AnimatedPercentage({ target = 100, duration = 2000 }) {
         }, interval);
 
         return () => clearInterval(timer);
-    }, [target, duration]);
-
+    }, [target, duration, isActive]);
+    if (!isActive) return;
     return <>{percent}%</>;
 }

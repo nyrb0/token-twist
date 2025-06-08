@@ -31,7 +31,7 @@ const Community = () => {
             </div>
 
             <div className={`${styles.wrapper} container`}>
-                <strong>Хочешь узнать что за место???</strong>
+                <h4>Хочешь узнать что за место???</h4>
                 <p>Сливы, инсайды, мемы. Всё, что нужно, чтобы не остаться нубом. Информация за которую можно и душу продать) </p>
                 <div className={styles.blocks}>
                     <SocialBlock

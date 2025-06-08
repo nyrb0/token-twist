@@ -1,6 +1,9 @@
 'use client';
 
+import { AnimatedPercentage } from '@/shared/reviews/AnimatedPercentage';
 import styles from './SheduleCircle.module.scss';
+import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 interface IScheduleCircle {
     index: number | null;
@@ -8,79 +11,135 @@ interface IScheduleCircle {
 }
 
 const ScheduleCircle = ({ index, setIndex }: IScheduleCircle) => {
+    const duration = 300;
     return (
-        <svg className={styles.circle} width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <g onMouseEnter={() => setIndex(4)} onMouseLeave={() => setIndex(null)} className={`${index == 4 && styles.activeBlue} ${styles.scale}`}>
-                <mask id="path-1-inside-1_2392_779" fill="white">
-                    <path d="M399.901 206.282C398.776 242.082 388.058 276.923 368.866 307.165C349.673 337.407 322.712 361.94 290.798 378.201L268.099 333.651C292.034 321.455 312.255 303.056 326.649 280.374C341.043 257.693 349.082 231.562 349.926 204.712L399.901 206.282Z" />
-                </mask>
-                <path
-                    d="M399.901 206.282C398.776 242.082 388.058 276.923 368.866 307.165C349.673 337.407 322.712 361.94 290.798 378.201L268.099 333.651C292.034 321.455 312.255 303.056 326.649 280.374C341.043 257.693 349.082 231.562 349.926 204.712L399.901 206.282Z"
-                    fill="#042BEE"
-                    stroke="white"
-                    stroke-width="8"
-                    mask="url(#path-1-inside-1_2392_779)"
-                />
-            </g>
-            <g
-                onMouseEnter={() => setIndex(1)}
-                onMouseLeave={() => setIndex(null)}
-                className={`${index == 1 && styles.activeOrange} ${styles.scale}`}
-            >
-                <mask id="path-2-inside-2_2392_779" fill="white">
-                    <path d="M290.803 378.199C253.171 397.375 210.434 404.145 168.718 397.539C127.002 390.932 88.4485 371.29 58.5824 341.425C28.7164 311.561 9.07142 273.008 2.46317 231.292C-4.14509 189.576 2.6226 146.84 21.7963 109.207L66.3472 131.905C51.967 160.13 46.8912 192.182 51.8474 223.469C56.8036 254.756 71.5373 283.671 93.9368 306.069C116.336 328.467 145.252 343.199 176.539 348.154C207.826 353.108 239.878 348.031 268.102 333.649L290.803 378.199Z" />
-                </mask>
+        <div className={styles.wrapper}>
+            <svg className={styles.circle} width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g
+                    onMouseEnter={() => setIndex(4)}
+                    onMouseLeave={() => setIndex(null)}
+                    className={`${index == 4 && styles.activeBlue} ${styles.scale}`}
+                >
+                    <mask id="path-1-inside-1_2392_779" fill="white">
+                        <path d="M399.901 206.282C398.776 242.082 388.058 276.923 368.866 307.165C349.673 337.407 322.712 361.94 290.798 378.201L268.099 333.651C292.034 321.455 312.255 303.056 326.649 280.374C341.043 257.693 349.082 231.562 349.926 204.712L399.901 206.282Z" />
+                    </mask>
+                    <path
+                        d="M399.901 206.282C398.776 242.082 388.058 276.923 368.866 307.165C349.673 337.407 322.712 361.94 290.798 378.201L268.099 333.651C292.034 321.455 312.255 303.056 326.649 280.374C341.043 257.693 349.082 231.562 349.926 204.712L399.901 206.282Z"
+                        fill="#042BEE"
+                        stroke="white"
+                        strokeWidth="8"
+                        mask="url(#path-1-inside-1_2392_779)"
+                    />
+                </g>
+                <g
+                    onMouseEnter={() => setIndex(1)}
+                    onMouseLeave={() => setIndex(null)}
+                    className={`${index == 1 && styles.activeOrange} ${styles.scale}`}
+                >
+                    <mask id="path-2-inside-2_2392_779" fill="white">
+                        <path d="M290.803 378.199C253.171 397.375 210.434 404.145 168.718 397.539C127.002 390.932 88.4485 371.29 58.5824 341.425C28.7164 311.561 9.07142 273.008 2.46317 231.292C-4.14509 189.576 2.6226 146.84 21.7963 109.207L66.3472 131.905C51.967 160.13 46.8912 192.182 51.8474 223.469C56.8036 254.756 71.5373 283.671 93.9368 306.069C116.336 328.467 145.252 343.199 176.539 348.154C207.826 353.108 239.878 348.031 268.102 333.649L290.803 378.199Z" />
+                    </mask>
 
-                <path
-                    d="M290.803 378.199C253.171 397.375 210.434 404.145 168.718 397.539C127.002 390.932 88.4485 371.29 58.5824 341.425C28.7164 311.561 9.07142 273.008 2.46317 231.292C-4.14509 189.576 2.6226 146.84 21.7963 109.207L66.3472 131.905C51.967 160.13 46.8912 192.182 51.8474 223.469C56.8036 254.756 71.5373 283.671 93.9368 306.069C116.336 328.467 145.252 343.199 176.539 348.154C207.826 353.108 239.878 348.031 268.102 333.649L290.803 378.199Z"
-                    fill="#FF4C00"
-                    stroke="white"
-                    stroke-width="8"
-                    mask="url(#path-2-inside-2_2392_779)"
-                />
-            </g>
-            <g onMouseEnter={() => setIndex(3)} onMouseLeave={() => setIndex(null)} className={`${index == 3 && styles.activePink} ${styles.scale}`}>
-                <mask id="path-3-inside-3_2392_779" fill="white">
-                    <path d="M341.421 58.5786C360.741 77.8983 375.897 100.972 385.955 126.375C396.013 151.779 400.76 178.973 399.901 206.282L349.926 204.712C350.57 184.23 347.01 163.834 339.466 144.781C331.923 125.729 320.556 108.424 306.066 93.934L341.421 58.5786Z" />
-                </mask>
-                <path
-                    d="M341.421 58.5786C360.741 77.8983 375.897 100.972 385.955 126.375C396.013 151.779 400.76 178.973 399.901 206.282L349.926 204.712C350.57 184.23 347.01 163.834 339.466 144.781C331.923 125.729 320.556 108.424 306.066 93.934L341.421 58.5786Z"
-                    fill="#BE008F"
-                    stroke="white"
-                    stroke-width="8"
-                    mask="url(#path-3-inside-3_2392_779)"
-                />
-            </g>
-            <g onMouseEnter={() => setIndex(2)} onMouseLeave={() => setIndex(null)} className={`${index == 2 && styles.activeGreen} ${styles.scale}`}>
-                <mask id="path-4-inside-4_2392_779" fill="white">
-                    <path d="M234.73 3.03845C274.976 10.135 312.083 29.3904 341.055 58.213L305.791 93.6597C284.062 72.0428 256.232 57.6012 226.047 52.2788L234.73 3.03845Z" />
-                </mask>
-                <path
-                    d="M234.73 3.03845C274.976 10.135 312.083 29.3904 341.055 58.213L305.791 93.6597C284.062 72.0428 256.232 57.6012 226.047 52.2788L234.73 3.03845Z"
-                    fill="#008791"
-                    stroke="white"
-                    stroke-width="8"
-                    mask="url(#path-4-inside-4_2392_779)"
-                />
-            </g>
-            <g
-                onMouseEnter={() => setIndex(0)}
-                onMouseLeave={() => setIndex(null)}
-                className={`${index == 0 && styles.activePurple} ${styles.scale}`}
+                    <path
+                        d="M290.803 378.199C253.171 397.375 210.434 404.145 168.718 397.539C127.002 390.932 88.4485 371.29 58.5824 341.425C28.7164 311.561 9.07142 273.008 2.46317 231.292C-4.14509 189.576 2.6226 146.84 21.7963 109.207L66.3472 131.905C51.967 160.13 46.8912 192.182 51.8474 223.469C56.8036 254.756 71.5373 283.671 93.9368 306.069C116.336 328.467 145.252 343.199 176.539 348.154C207.826 353.108 239.878 348.031 268.102 333.649L290.803 378.199Z"
+                        fill="#FF4C00"
+                        stroke="white"
+                        strokeWidth="8"
+                        mask="url(#path-2-inside-2_2392_779)"
+                    />
+                </g>
+                <g
+                    onMouseEnter={() => setIndex(3)}
+                    onMouseLeave={() => setIndex(null)}
+                    className={`${index == 3 && styles.activePink} ${styles.scale}`}
+                >
+                    <mask id="path-3-inside-3_2392_779" fill="white">
+                        <path d="M341.421 58.5786C360.741 77.8983 375.897 100.972 385.955 126.375C396.013 151.779 400.76 178.973 399.901 206.282L349.926 204.712C350.57 184.23 347.01 163.834 339.466 144.781C331.923 125.729 320.556 108.424 306.066 93.934L341.421 58.5786Z" />
+                    </mask>
+                    <path
+                        d="M341.421 58.5786C360.741 77.8983 375.897 100.972 385.955 126.375C396.013 151.779 400.76 178.973 399.901 206.282L349.926 204.712C350.57 184.23 347.01 163.834 339.466 144.781C331.923 125.729 320.556 108.424 306.066 93.934L341.421 58.5786Z"
+                        fill="#BE008F"
+                        stroke="white"
+                        strokeWidth="8"
+                        mask="url(#path-3-inside-3_2392_779)"
+                    />
+                </g>
+                <g
+                    onMouseEnter={() => setIndex(2)}
+                    onMouseLeave={() => setIndex(null)}
+                    className={`${index == 2 && styles.activeGreen} ${styles.scale}`}
+                >
+                    <mask id="path-4-inside-4_2392_779" fill="white">
+                        <path d="M234.73 3.03845C274.976 10.135 312.083 29.3904 341.055 58.213L305.791 93.6597C284.062 72.0428 256.232 57.6012 226.047 52.2788L234.73 3.03845Z" />
+                    </mask>
+                    <path
+                        d="M234.73 3.03845C274.976 10.135 312.083 29.3904 341.055 58.213L305.791 93.6597C284.062 72.0428 256.232 57.6012 226.047 52.2788L234.73 3.03845Z"
+                        fill="#008791"
+                        stroke="white"
+                        strokeWidth="8"
+                        mask="url(#path-4-inside-4_2392_779)"
+                    />
+                </g>
+                <g
+                    onMouseEnter={() => setIndex(0)}
+                    onMouseLeave={() => setIndex(null)}
+                    className={`${index == 0 && styles.activePurple} ${styles.scale}`}
+                >
+                    <mask id="path-5-inside-5_2392_779" fill="white">
+                        <path d="M21.7932 109.213C41.2762 70.9695 72.5449 40.0084 110.979 20.9045C149.413 1.80053 192.973 -4.43272 235.222 3.12584L226.416 52.3444C194.729 46.6755 162.059 51.3504 133.234 65.6783C104.409 80.0063 80.9571 103.227 66.3449 131.909L21.7932 109.213Z" />
+                    </mask>
+                    <path
+                        d="M21.7932 109.213C41.2762 70.9695 72.5449 40.0084 110.979 20.9045C149.413 1.80053 192.973 -4.43272 235.222 3.12584L226.416 52.3444C194.729 46.6755 162.059 51.3504 133.234 65.6783C104.409 80.0063 80.9571 103.227 66.3449 131.909L21.7932 109.213Z"
+                        fill="#9747FF"
+                        stroke="white"
+                        strokeWidth="8"
+                        mask="url(#path-5-inside-5_2392_779)"
+                    />
+                </g>
+                {/* <circle cx="200" cy="200" r="100" fill="#D9D9D9" /> */}
+            </svg>
+            <Image className={styles.logo} src={'/icon-logo.svg'} width={200} height={200} alt="logo token twist" />
+            <motion.div
+                initial={{ opacity: 0, x: -10 }}
+                animate={index === 4 ? { opacity: 1, x: 0 } : {}}
+                transition={{ duration: 0.1, ease: 'easeInOut' }}
+                className={styles.procentBlue}
             >
-                <mask id="path-5-inside-5_2392_779" fill="white">
-                    <path d="M21.7932 109.213C41.2762 70.9695 72.5449 40.0084 110.979 20.9045C149.413 1.80053 192.973 -4.43272 235.222 3.12584L226.416 52.3444C194.729 46.6755 162.059 51.3504 133.234 65.6783C104.409 80.0063 80.9571 103.227 66.3449 131.909L21.7932 109.213Z" />
-                </mask>
-                <path
-                    d="M21.7932 109.213C41.2762 70.9695 72.5449 40.0084 110.979 20.9045C149.413 1.80053 192.973 -4.43272 235.222 3.12584L226.416 52.3444C194.729 46.6755 162.059 51.3504 133.234 65.6783C104.409 80.0063 80.9571 103.227 66.3449 131.909L21.7932 109.213Z"
-                    fill="#9747FF"
-                    stroke="white"
-                    stroke-width="8"
-                    mask="url(#path-5-inside-5_2392_779)"
-                />
-            </g>
-            <circle cx="200" cy="200" r="100" fill="#D9D9D9" />
-        </svg>
+                <AnimatedPercentage isActive={index === 4} target={18} duration={duration} />
+            </motion.div>
+            <motion.div
+                initial={{ opacity: 0, x: -10 }}
+                animate={index === 1 ? { opacity: 1, x: 0 } : {}}
+                transition={{ duration: 0.1, ease: 'easeInOut' }}
+                className={styles.procentOrange}
+            >
+                <AnimatedPercentage isActive={index === 1} target={36} duration={duration} />
+            </motion.div>
+            <motion.div
+                initial={{ opacity: 0, y: -10 }}
+                animate={index === 2 ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.1, ease: 'easeInOut' }}
+                className={styles.procentGreen}
+            >
+                <AnimatedPercentage isActive={index === 2} target={8} duration={duration} />
+            </motion.div>
+            <motion.div
+                initial={{ opacity: 0, x: -10 }}
+                animate={index === 3 ? { opacity: 1, x: 0 } : {}}
+                transition={{ duration: 0.1, ease: 'easeInOut' }}
+                className={styles.procentPink}
+            >
+                <AnimatedPercentage isActive={index === 3} target={9} duration={duration} />
+            </motion.div>
+            <motion.div
+                initial={{ opacity: 0, y: -10 }}
+                animate={index === 0 ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.1, ease: 'easeInOut' }}
+                className={styles.procentPurple}
+            >
+                <AnimatedPercentage isActive={index === 0} target={29} duration={duration} />
+            </motion.div>
+        </div>
     );
 };
 

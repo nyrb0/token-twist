@@ -1,14 +1,31 @@
 .route {
     // padding-top: 80px+60px;
-    position: relative;
+    // overflow: hidden;
+
     height: 100%;
-    overflow: hidden;
+    position: relative;
     .navigation {
         width: 100%;
-        padding-bottom: 20px;
+        // padding-bottom: 20px;
         top: 40px;
         position: absolute;
         box-sizing: border-box;
         z-index: 999;
+    }
+
+    @media (max-width: 1500px) {
+        h2 {
+            font-size: 22px !important;
+        }
+    }
+    @media (max-width: 900px) {
+        .wrapper {
+            justify-content: center;
+            flex-direction: row;
+        }
+
+        h2 {
+            display: none;
+        }
     }
 }

@@ -28,32 +28,34 @@ const About = () => {
                     </p>
                 </div>
                 <div className="container">
-                    <div className="df jce">
-                        <div className={styles.result}>
+                    <div className={`${styles.result} df jce`}>
+                        <div>
                             <h2>Готовы? Потому что мы уже разгоняемся.</h2>
-                            <div className={styles.chart}>
-                                <Image src={monkey.src} className={styles.monkey} width={716} height={718} alt="monkey token twist" />
-                                <CustomChart />
-                            </div>
-
-                            <div className={`${styles.description} df aic`}>
-                                <div className={styles.left}>
-                                    <h3>Алмазное ядро</h3>
-                                    <strong>Не толпа. Не масса. Это — ударный отряд.</strong>
-                                    <ul>
-                                        <li>Каждая цифра — новый уровень влияния.</li>
-                                        <li>100K? Разминка. 1M+? Точка доминирования. </li>
-                                        <li>Фиолетовый — значит, мы уже внутри системы.</li>
-                                    </ul>
+                            <div className="df fdc aie">
+                                <div className={styles.chart}>
+                                    <Image src={monkey.src} className={styles.monkey} width={716} height={718} alt="monkey token twist" />
+                                    <CustomChart />
                                 </div>
-                                <div className={styles.right}>
-                                    <h3>Огненная река</h3>
-                                    <strong>Цифры, которые сжигают старый мир</strong>
-                                    <ul>
-                                        <li>Это не просто деньги. Это топливо революции.</li>
-                                        <li>Всплеск — значит, система живая и голодная.</li>
-                                        <li>Просадка? Идеально. Очищение перед прыжком.</li>
-                                    </ul>
+
+                                <div className={`${styles.description} df aic jcsb`}>
+                                    <div className={styles.left}>
+                                        <h3>Алмазное ядро</h3>
+                                        <strong>Не толпа. Не масса. Это — ударный отряд.</strong>
+                                        <ul>
+                                            <li>Каждая цифра — новый уровень влияния.</li>
+                                            <li>100K? Разминка. 1M+? Точка доминирования. </li>
+                                            <li>Фиолетовый — значит, мы уже внутри системы.</li>
+                                        </ul>
+                                    </div>
+                                    <div className={styles.right}>
+                                        <h3>Огненная река</h3>
+                                        <strong>Цифры, которые сжигают старый мир</strong>
+                                        <ul>
+                                            <li>Это не просто деньги. Это топливо революции.</li>
+                                            <li>Всплеск — значит, система живая и голодная.</li>
+                                            <li>Просадка? Идеально. Очищение перед прыжком.</li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
