@@ -13,6 +13,7 @@ const Header = () => {
         });
     };
     const [index, setIndex] = React.useState<null | number>(null);
+
     return (
         <header className={`${styles.header} df aic jcc`}>
             <ul className={`${styles.ul} df aic jcsa`}>

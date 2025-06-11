@@ -45,7 +45,7 @@ const WhereBuyToken = () => {
     const isInView = useInView(ref, { once: true, amount: 0.5 }); // once — анимация только один раз
     const isViewCard = useInView(ref, { once: true, amount: 0.5 }); // once — анимация только один раз
     const step = useInView(refStep, { once: true, amount: 0.5 }); // once — анимация только один раз
-    const size = useWindowSize();
+    const size = useWindowSize() ?? 0;
     return (
         <div ref={ref} className={`${styles.where} df`} id="buy-token">
             <div className={styles.sideLeft}>
