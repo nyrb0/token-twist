@@ -18,9 +18,8 @@ export default function Home() {
             <RouteComminity />
             <Hr />
             <Question />
-            {/* <Hr />
-            <Footer /> 
-            <RoadMap />  */}
+            <Hr />
+            {/* <Footer /> */}
         </>
     );
 }

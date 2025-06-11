@@ -1,9 +1,9 @@
 .chart {
     padding: 0 15px;
-
     font-size: 12px;
     font-weight: 700;
     padding-bottom: 8px;
+    overflow-x: scroll;
 }
 .content {
     width: 100%;
@@ -22,4 +22,30 @@
     margin-top: 16px;
     padding-left: 75px;
     padding-right: 27px;
+    @media (max-width: 720px) {
+        font-size: 12px;
+        padding-left: 55px;
+        padding-right: 20px;
+    }
+}
+
+@media (max-width: 720px) {
+    .bottom {
+        font-size: 12px;
+        padding-left: 55px;
+        padding-right: 20px;
+    }
+
+    .left {
+        font-size: 12px;
+    }
+    .chart {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 650px) {
+    .chart {
+        display: none;
+    }
 }

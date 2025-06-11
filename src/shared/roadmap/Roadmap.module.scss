@@ -49,9 +49,11 @@
             .monkey {
                 z-index: 999;
                 position: absolute;
-                bottom: -435px;
+                bottom: -450px;
                 left: 90px;
+                transform: translateY(25px);
             }
+
             .purble {
                 z-index: 1;
                 position: absolute;
@@ -60,7 +62,8 @@
             }
         }
     }
-    @media (max-width: 1500px) {
+
+    @media (max-width: 1200px) {
         .wrapper {
             gap: 10px;
             .block {
@@ -118,6 +121,12 @@
                 padding-left: 10px;
                 overflow-x: scroll;
                 gap: 32px;
+                scrollbar-width: none;
+                -ms-overflow-style: none;
+
+                &::-webkit-scrollbar {
+                    display: none;
+                }
             }
         }
     }
@@ -160,7 +169,7 @@
         }
     }
 
-    @media (max-width: 1500px) {
+    @media (max-width: 1200px) {
         width: 210px;
 
         .header {

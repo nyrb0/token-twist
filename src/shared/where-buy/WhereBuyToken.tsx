@@ -13,6 +13,7 @@ import { Button } from '../UI/button/Button';
 import IconLineDash from './Icons/IconLineDash';
 
 import { motion, useInView } from 'framer-motion';
+import { useWindowSize } from '../hooks/useWindowSize';
 
 const cards = [
     {
@@ -44,6 +45,7 @@ const WhereBuyToken = () => {
     const isInView = useInView(ref, { once: true, amount: 0.5 }); // once — анимация только один раз
     const isViewCard = useInView(ref, { once: true, amount: 0.5 }); // once — анимация только один раз
     const step = useInView(refStep, { once: true, amount: 0.5 }); // once — анимация только один раз
+    const size = useWindowSize();
     return (
         <div ref={ref} className={`${styles.where} df`} id="buy-token">
             <div className={styles.sideLeft}>
@@ -68,6 +70,9 @@ const WhereBuyToken = () => {
                         <h2>Как купить нашу монету?</h2>
                         <strong>Чтобы потом плакаться!</strong>
                     </div>
+                </div>
+
+                <div className={`${size <= 900 ? '' : 'container'} `}>
                     <motion.div
                         ref={refCard}
                         className={`${styles.cards} df jcsb`}
@@ -75,10 +80,44 @@ const WhereBuyToken = () => {
                         animate={isViewCard ? { opacity: 1, y: 0 } : {}}
                         transition={{ duration: 0.6, ease: 'easeOut' }}
                     >
-                        {cards.map((item, i) => (
-                            <CardHowBuy key={i} description={item.description} icon={item.icon} title={item.title} />
-                        ))}
+                        {cards.map((item, i) => {
+                            let idx = false;
+                            if (i % 2 !== 0) idx = true;
+                            return (
+                                <div key={i} className={`${styles.wrapperBlock} df fdc aic`}>
+                                    {idx && (
+                                        <div className={`${styles.arrowBottom} df fdc aic`} style={{ transform: 'translateY(12px)' }}>
+                                            <Circle type={1} number={3} />
+                                            <span style={{ transform: 'translateY(-5px)' }}>
+                                                <svg width="12" height="72" viewBox="0 0 12 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M6 71.3333C3.05448 71.3333 0.666667 68.9455 0.666667 66C0.666667 63.0545 3.05448 60.6667 6 60.6667C8.94552 60.6667 11.3333 63.0545 11.3333 66C11.3333 68.9455 8.94552 71.3333 6 71.3333ZM6 11.3333C3.05448 11.3333 0.666667 8.94552 0.666667 6C0.666667 3.05448 3.05448 0.666672 6 0.666672C8.94552 0.666672 11.3333 3.05448 11.3333 6C11.3333 8.94552 8.94552 11.3333 6 11.3333ZM6 66H5V62.25H6H7V66H6ZM6 54.75H5V47.25H6H7V54.75H6ZM6 39.75H5V32.25H6H7V39.75H6ZM6 24.75H5V17.25H6H7V24.75H6ZM6 9.75H5V6H6H7V9.75H6Z"
+                                                        fill="#FF4C00"
+                                                    />
+                                                </svg>
+                                            </span>
+                                        </div>
+                                    )}
+                                    <CardHowBuy description={item.description} icon={item.icon} title={item.title} />
+                                    {!idx && (
+                                        <div className={`${styles.arrowBottom} df fdc aic`} style={{ transform: 'translateY(-12px)' }}>
+                                            <span style={{ transform: 'translateY(5px)' }}>
+                                                <svg width="12" height="72" viewBox="0 0 12 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M6 71.3333C3.05448 71.3333 0.666667 68.9455 0.666667 66C0.666667 63.0545 3.05448 60.6667 6 60.6667C8.94552 60.6667 11.3333 63.0545 11.3333 66C11.3333 68.9455 8.94552 71.3333 6 71.3333ZM6 11.3333C3.05448 11.3333 0.666667 8.94552 0.666667 6C0.666667 3.05448 3.05448 0.666672 6 0.666672C8.94552 0.666672 11.3333 3.05448 11.3333 6C11.3333 8.94552 8.94552 11.3333 6 11.3333ZM6 66H5V62.25H6H7V66H6ZM6 54.75H5V47.25H6H7V54.75H6ZM6 39.75H5V32.25H6H7V39.75H6ZM6 24.75H5V17.25H6H7V24.75H6ZM6 9.75H5V6H6H7V9.75H6Z"
+                                                        fill="#FF4C00"
+                                                    />
+                                                </svg>
+                                            </span>
+                                            <Circle type={1} number={3} />
+                                        </div>
+                                    )}
+                                </div>
+                            );
+                        })}
                     </motion.div>
+                </div>
+                <div className="container">
                     <div className={`${styles.circles} df jcsa aic`} ref={refStep}>
                         <motion.div
                             initial={{ opacity: 0 }}
@@ -136,8 +175,11 @@ const WhereBuyToken = () => {
                             animate={step ? { opacity: 1 } : {}}
                             transition={{ delay: 2, duration: 0.6, ease: 'easeOut' }}
                         >
-                            <p>А чтобы тебе было проще я оставил тут кнопку,</p>
-                            <p>а то мало ли ты не шаришь в крипте</p>
+                            <p>Оставлю кнопку, а то мало ли ты не шаришь в крипте!</p>
+                            <div className={styles.left}>
+                                <p>А чтобы тебе было проще я оставил тут кнопку,</p>
+                                <p>а то мало ли ты не шаришь в крипте</p>
+                            </div>
                         </motion.div>
                         <motion.div
                             initial={{ opacity: 0 }}

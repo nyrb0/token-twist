@@ -2,46 +2,88 @@
     position: relative;
     overflow: hidden;
     height: 100vh;
-    background-color: gray;
-
-    .board {
+    background-color: #cbcbcb;
+    header {
+        @media (max-width: 950px) {
+            display: none;
+        }
+    }
+    @media (max-width: 850px) {
         height: 100%;
-        transform: translate(-13%, 10px);
-
+        padding-top: 64px;
+    }
+    .board {
+        position: absolute;
+        bottom: 150px;
+        left: 200px;
         & img {
             object-fit: contain;
             z-index: 1;
         }
         .container {
             position: relative;
-
+            bottom: -200px;
             .texts {
                 position: absolute;
                 top: 250px;
-                right: 185px;
+                right: 182px;
                 z-index: 2;
             }
-            @media (max-width: 1500px) {
-                bottom: -75px;
-                & img {
-                    width: 800px;
-                }
-                .texts {
-                    right: 142px;
-                    top: 304px;
-                }
-            }
+        }
+        @media (max-width: 1500px) {
+            transform: scale(0.8);
+            left: -100px;
+            bottom: -10px;
+        }
+        @media (max-width: 1200px) {
+            transform: scale(0.65);
+            bottom: -80px;
+        }
+        @media (max-width: 1083px) {
+            bottom: -120px;
+            left: -200px;
+            transform: scale(0.6);
+        }
+        @media (max-width: 850px) {
+            display: none;
+        }
+    }
+    .mon {
+        display: none;
+    }
+    @media (max-width: 570px) {
+        .mobile {
+            padding-top: 44px;
+            display: block;
         }
     }
     .chat {
         position: absolute;
         bottom: 275px;
         right: 36px;
+        @media (max-width: 1500px) {
+            transform: scale(0.8);
+            right: 10px;
+            bottom: 200px;
+        }
+        @media (max-width: 1200px) {
+            transform: scale(0.65);
+            right: -35px;
+            bottom: 130px;
+        }
+        @media (max-width: 920px) {
+            transform: scale(0.55);
+        }
+        @media (max-width: 850px) {
+            display: none;
+        }
     }
 }
 
 .infoBoard {
     width: 670px;
+    position: relative;
+    z-index: 99;
     h1 {
         font-family: var(--second-family);
         font-weight: 400;
@@ -63,9 +105,12 @@
         margin-top: 20px;
     }
     .boardButton {
-        gap: 16px;
         margin-top: 35px;
-        height: 56px;
+        width: 100%;
+        gap: 16px;
+        button {
+            height: 56px;
+        }
     }
     p {
         font-family: var(--font-family);
@@ -87,33 +132,98 @@
         margin-top: 32px;
         background: #000;
     }
-    @media (max-width: 1500px) {
-        width: 500px;
-        .square {
-            font-size: 14px;
-            margin-top: 25px;
-            height: 40px;
+    .mobile {
+        display: none;
+    }
+    @media (max-width: 570px) {
+        width: 100%;
+
+        .mobile {
+            display: block;
         }
-        .boardButton {
-            margin-top: 25px;
-            height: 45px;
-            button {
-                font-size: 14px !important;
-            }
+        .desktop {
+            display: none;
         }
-        h1 {
-            font-size: 27px;
-        }
-        h2 {
-            font-size: 18px;
-            margin-top: 13px;
-        }
+        h1,
+        h2,
         h3 {
-            margin-top: 13px;
             font-size: 18px;
         }
         p {
             font-size: 14px;
         }
+        .boardButton {
+            display: none;
+        }
+    }
+}
+
+.mobile {
+    display: none;
+    .desc {
+        h1 {
+            font-family: var(--second-family);
+            font-weight: 400;
+            font-size: 18px;
+            color: var(--normal);
+        }
+        h2 {
+            font-family: var(--second-family);
+            font-weight: 400;
+            font-size: 18px;
+            color: #111;
+            margin-top: 20px;
+        }
+        h3 {
+            font-family: var(--second-family);
+            font-weight: 400;
+            font-size: 18px;
+            color: var(--normal);
+            margin-top: 20px;
+        }
+
+        p {
+            font-family: var(--font-family);
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 145%;
+            color: #4a4a4a;
+            margin-top: 4px;
+        }
+        margin-bottom: 15px;
+    }
+
+    .mobileBoard {
+        position: relative;
+        @media (max-width: 390px) {
+            transform: scale(0.9);
+        }
+        @media (max-width: 350px) {
+            transform: scale(0.8);
+        }
+
+        .btns {
+            width: 100%;
+            gap: 16px;
+            position: absolute;
+            bottom: 50px;
+            z-index: 9;
+        }
+        .monkeyMobile {
+            left: 50px;
+            top: -12px;
+            z-index: 1;
+            position: absolute;
+        }
+    }
+    @media (max-width: 850px) {
+        display: block;
+        transform: translateY(10px);
+    }
+    @media (max-width: 390px) {
+        transform: translateY(23px);
+    }
+    @media (max-width: 350px) {
+        transform: translateY(40px);
     }
 }

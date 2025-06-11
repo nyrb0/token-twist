@@ -5,6 +5,7 @@ import CustomTooltip from './CustomToolip';
 import CustomBar from './CustomBar';
 import { useHoveredBar } from './useHoveredBar';
 import { useWindowSize } from '@/shared/hooks/useWindowSize';
+import { div } from 'framer-motion/client';
 const data = [
     { name: 'Июнь', purple: 250000, orange: 100000 },
     { name: 'Июль', purple: 600000, orange: 100000 },
@@ -45,11 +46,9 @@ const CustomChart = () => {
 
                     <div style={{ position: 'relative' }}>
                         <CustomTooltip hovered={hovered} data={data} />
-
                         <ResponsiveContainer width="100%" height={280}>
                             <BarChart data={data} barCategoryGap="0%">
                                 <CartesianGrid strokeDasharray="4 4" />
-
                                 <Bar
                                     dataKey="purple"
                                     fill="#A259FF"

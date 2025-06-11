@@ -11,15 +11,22 @@
     font-size: 20px;
     color: #111;
     min-height: 65px;
-
     position: relative;
     cursor: pointer;
-
     transition: padding 0.2s ease-in-out;
+
+    @media (max-width: 638px) {
+        font-size: 14px;
+        padding: 16px 16px 0px 16px;
+        min-height: 60px;
+    }
+
     .selected {
+        transform: translateY(5px);
         padding-bottom: 20px;
         box-sizing: border-box;
     }
+
     .dropdown {
         font-size: 16px;
         font-weight: 600;
@@ -32,7 +39,12 @@
         transition:
             max-height 0.4s ease,
             padding 0.6s ease;
+
+        @media (max-width: 390px) {
+            font-size: 14px;
+        }
     }
+
     &.open {
         .dropdown {
             max-height: 200px;

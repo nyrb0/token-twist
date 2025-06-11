@@ -10,14 +10,14 @@ const Ambassador = () => {
                 <div className={styles.wrapper}>
                     <h4>Наш амбассадор — лицо, мем и энергия TokenTwist</h4>
                     <p>Тот кто с нами с самого начала. Тот кто всегда будет за нас и тот кому мы доверяем больше всего!</p>
-                    <div className={`${styles.content} df `}>
-                        <div className={styles.right}>
-                            <div className={`${styles.block} ${styles.owner}`}></div>
+                    <div className={`${styles.content} df jcsb`}>
+                        <div className={styles.left}>
+                            <div className={`${styles.block} ${styles.bigBlock}`}></div>
                         </div>
-                        <div className={`${styles.left} df fdc`}>
-                            <div className={styles.block}></div>
-                            <div className={styles.block}></div>
-                            <div className={styles.block}></div>
+                        <div className={`${styles.right} df fdc`}>
+                            <div className={`${styles.block} ${styles.blockMini}`}></div>
+                            <div className={`${styles.block} ${styles.blockMini}`}></div>
+                            <div className={`${styles.block} ${styles.blockMini}`}></div>
                         </div>
                     </div>
                 </div>

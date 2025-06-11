@@ -15,6 +15,14 @@
         width: auto;
         height: 1080px;
     }
+    @media (max-width: 1000px) {
+        .seaweed {
+            display: none;
+        }
+        .monkey {
+            display: none;
+        }
+    }
     .questions {
         position: relative;
         z-index: 9;
@@ -53,6 +61,24 @@
             }
             .dropdowns {
                 gap: 16px;
+            }
+        }
+        @media (max-width: 900px) {
+            .header {
+                h2 {
+                    font-size: 20px !important ;
+                }
+                h3 {
+                    font-size: 20px !important ;
+                }
+            }
+        }
+        @media (max-width: 639px) {
+            .header {
+                flex-direction: column-reverse;
+                h2 {
+                    margin-top: 16px;
+                }
             }
         }
     }
