@@ -117,8 +117,8 @@ const WhereBuyToken = () => {
                         })}
                     </motion.div>
                 </div>
-                <div className="container">
-                    <div className={`${styles.circles} df jcsa aic`} ref={refStep}>
+                <div className="container" ref={refStep}>
+                    <div className={`${styles.circles} df jcsa aic`}>
                         <motion.div
                             initial={{ opacity: 0 }}
                             animate={step ? { opacity: 1 } : {}}
@@ -173,7 +173,7 @@ const WhereBuyToken = () => {
                         <motion.div
                             initial={{ opacity: 0 }}
                             animate={step ? { opacity: 1 } : {}}
-                            transition={{ delay: 2, duration: 0.6, ease: 'easeOut' }}
+                            transition={{ delay: size <= 900 ? 0.5 : 2, duration: 0.6, ease: 'easeOut' }}
                         >
                             <p>Оставлю кнопку, а то мало ли ты не шаришь в крипте!</p>
                             <div className={styles.left}>
@@ -191,7 +191,7 @@ const WhereBuyToken = () => {
                         <motion.span
                             initial={{ opacity: 0 }}
                             animate={step ? { opacity: 1 } : {}}
-                            transition={{ delay: 2.5, duration: 0.6, ease: 'easeOut' }}
+                            transition={{ delay: size <= 900 ? 1 : 2.5, duration: 0.6, ease: 'easeOut' }}
                         >
                             <Button>НЕ УПУСТИ ШАНС!</Button>
                             <p className={`df jcc`}>+ бонус для первых 100 холдеров</p>

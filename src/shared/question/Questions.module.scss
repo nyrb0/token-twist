@@ -36,8 +36,12 @@
         background-color: white;
         box-sizing: border-box;
         width: 100%;
-        height: 717px;
+        height: 725px;
         margin-bottom: 63px;
+        @media (max-width: 450px) {
+            padding: 20px;
+            padding-bottom: 0;
+        }
         .header {
             font-size: 32px;
             font-weight: 400;
