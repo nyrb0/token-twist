@@ -1,5 +1,6 @@
 .footer {
     padding: 80px 0 93px 0;
+
     .wrapper {
         border-bottom: 4px solid #000;
         border-left: 1px solid #000;
@@ -48,12 +49,24 @@
                 &:active::after {
                     height: 40px;
                 }
+                @media (max-width: 1260px) {
+                    font-size: 16px;
+                }
+                @media (max-width: 990px) {
+                    font-size: 15px;
+                    padding: 10px;
+                }
             }
             gap: 20px;
             .column {
                 gap: 42px;
             }
         }
+        .mobileNavigations {
+            display: none;
+            width: 200px;
+        }
+
         .socials {
             gap: 8px;
             .social {
@@ -76,6 +89,29 @@
                 &:nth-child(4) {
                     color: #608ce6;
                 }
+                @media (max-width: 850px) {
+                    font-size: 24px;
+                }
+            }
+        }
+        @media (max-width: 760px) {
+            height: 100%;
+            .navigationsDesktop {
+                display: none;
+            }
+            .navigations {
+                button {
+                    font-size: 20px !important;
+                }
+            }
+
+            .mobileNavigations {
+                display: flex;
+            }
+            .socials {
+                margin-top: 50px;
+                flex-direction: column;
+                gap: 30px;
             }
         }
     }
