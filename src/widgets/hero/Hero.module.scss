@@ -3,15 +3,17 @@
     overflow: hidden;
     height: 100vh;
     background-color: #cbcbcb;
+    min-height: 1100px;
     header {
         @media (max-width: 950px) {
             display: none;
         }
     }
     @media (max-width: 850px) {
+        min-height: 100%;
         height: 100%;
-        padding-top: 64px;
     }
+
     .board {
         position: absolute;
         bottom: 150px;
@@ -53,7 +55,7 @@
     }
     @media (max-width: 570px) {
         .mobile {
-            padding-top: 44px;
+            padding-top: 64px;
             display: block;
         }
     }

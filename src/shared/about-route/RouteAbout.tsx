@@ -22,7 +22,10 @@ const RouteAbout = () => {
     };
     return (
         <div className={styles.route}>
-            <div className={`${styles.navigation} df`}>
+            <div className="container">
+                <div className={`${styles.buyCard} df jcc aic`}>Купите STWIST. Или наблюдайте, как это сделают другие :)</div>
+            </div>
+            <div className={`${styles.navigation} ${styles.about} df`}>
                 <div className={`${styles.wrapper} container df jcsb aic`}>
                     <h2>{routes()}</h2>
                     <Navigation links={pages} value={current} onChange={(value) => setCurrent(value)} />

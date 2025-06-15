@@ -1,16 +1,27 @@
 .route {
-    // padding-top: 80px+60px;
-    // overflow: hidden;
-
     height: 100%;
     position: relative;
     .navigation {
         width: 100%;
-        // padding-bottom: 20px;
         top: 40px;
         position: absolute;
         box-sizing: border-box;
         z-index: 999;
+    }
+    .buyCard {
+        display: none;
+        margin-top: 40px;
+        font-family: var(--font-family);
+        font-weight: 800;
+        font-size: 14px;
+        text-align: center;
+        color: #fff;
+        padding: 16px;
+        background: #000;
+        height: 49px;
+    }
+    .about {
+        top: 40px;
     }
 
     @media (max-width: 1500px) {
@@ -19,13 +30,19 @@
         }
     }
     @media (max-width: 900px) {
-        .wrapper {
-            justify-content: center;
-            flex-direction: row;
+        .about {
+            top: 186px;
         }
-
-        h2 {
-            display: none;
+        .buyCard {
+            display: flex;
+        }
+        .wrapper {
+            flex-direction: column;
+            width: 471px;
+            gap: 16px;
+            h2 {
+                align-self: flex-start;
+            }
         }
     }
 }

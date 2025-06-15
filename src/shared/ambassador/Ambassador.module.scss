@@ -4,6 +4,9 @@
     box-sizing: border-box;
     height: 100%;
     padding-bottom: 222px;
+    @media (max-width: 900px) {
+        padding-top: 190px;
+    }
     .wrapper {
         h4 {
             font-family: var(--second-family);

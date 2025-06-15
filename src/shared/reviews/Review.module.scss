@@ -5,6 +5,9 @@
     padding-bottom: 76px;
     box-sizing: border-box;
     overflow: hidden;
+    @media (max-width: 900px) {
+        padding-top: 190px;
+    }
 
     .background1 {
         position: absolute;

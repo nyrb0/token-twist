@@ -4,7 +4,9 @@
     height: 100%;
     z-index: 1;
     width: 100%;
-
+    @media (max-width: 900px) {
+        padding-top: 250px;
+    }
     @media (max-width: 800px) {
         .wrapper {
             overflow: visible;

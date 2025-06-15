@@ -3,6 +3,10 @@
     padding-top: 80px+60px;
     padding-bottom: 90px;
     box-sizing: border-box;
+
+    @media (max-width: 900px) {
+        padding-top: 190px;
+    }
     .grow {
         position: absolute;
         height: 100%;
