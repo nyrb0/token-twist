@@ -38,7 +38,8 @@
         }
         .wrapper {
             flex-direction: column;
-            width: 471px;
+            max-width: 471px;
+            width: 100%;
             gap: 16px;
             h2 {
                 align-self: flex-start;
