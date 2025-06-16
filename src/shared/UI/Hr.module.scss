@@ -15,4 +15,8 @@
             font-size: 10px;
         }
     }
+
+    @media (max-width: 680px) {
+        height: 28px;
+    }
 }

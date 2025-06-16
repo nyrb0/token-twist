@@ -10,15 +10,15 @@ export default function Home() {
     return (
         <>
             <Hero />
-            <Hr />
+            <Hr type={'coin'} />
             <RouteAbout />
-            <Hr />
+            <Hr type={'buy'} />
             <WhereBuyToken />
-            <Hr />
+            <Hr type={'buy'} />
             <RouteComminity />
-            <Hr />
+            <Hr type={'community'} />
             <Question />
-            <Hr />
+            <Hr type={'question'} />
             <Footer />
         </>
     );
