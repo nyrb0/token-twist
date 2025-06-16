@@ -4,13 +4,9 @@
     height: 100%;
     z-index: 1;
     width: 100%;
-    @media (max-width: 900px) {
-        padding-top: 250px;
-    }
-    @media (max-width: 800px) {
-        .wrapper {
-            overflow: visible;
-        }
+
+    .monkeyMobile {
+        display: none;
     }
 
     .background {
@@ -63,7 +59,7 @@
             @media (max-width: 1000px) {
                 justify-content: center;
             }
-
+            width: 100%;
             .chart {
                 position: relative;
                 margin-top: 16px;
@@ -101,6 +97,9 @@
                         display: none;
                     }
                     max-width: none;
+                }
+                @media (max-width: 680px) {
+                    padding: 16px;
                 }
             }
 
@@ -149,6 +148,70 @@
                     color: var(--normal);
                 }
             }
+            .descriptionMobile {
+                display: none;
+                border-bottom: 4px solid #000;
+                border-left: 1px solid #000;
+                border-right: 4px solid #000;
+                border-top: 1px solid #000;
+                border-radius: 16px;
+                background-color: #fff;
+                padding: 16px;
+                box-sizing: border-box;
+                width: 100%;
+                margin-top: 20px;
+                h3 {
+                    font-family: var(--second-family);
+                    font-weight: 400;
+                    font-size: 20px;
+                    color: var(--normal);
+                    span {
+                        width: 16px;
+                        height: 16px;
+                        border-radius: 50%;
+                        background-color: #000;
+                    }
+                }
+                p {
+                    font-family: var(--font-family);
+                    font-weight: 700;
+                    font-size: 14px;
+                    line-height: 145%;
+                    margin-top: 8px;
+                }
+            }
+        }
+    }
+    @media (max-width: 900px) {
+        padding-top: 250px;
+    }
+    @media (max-width: 800px) {
+        .wrapper {
+            overflow: visible;
+        }
+    }
+    @media (max-width: 680px) {
+        h2 {
+            display: none;
+        }
+        .wrapper {
+            padding-bottom: 0;
+        }
+        .chart {
+            margin-top: 0 !important;
+        }
+        .description {
+            display: none;
+        }
+        .descriptionMobile {
+            display: block !important;
+        }
+        .background {
+            top: 68%;
+            height: 250px;
+        }
+        .monkeyMobile {
+            display: block;
         }
     }
 }

@@ -1,10 +1,13 @@
-.chart {
+.wrapperChart {
     padding: 0 15px;
-    font-size: 12px;
-    font-weight: 700;
-    padding-bottom: 8px;
-    overflow-x: scroll;
+    .chart {
+        width: 100%;
+        font-size: 12px;
+        font-weight: 700;
+        padding-bottom: 8px;
+    }
 }
+
 .content {
     width: 100%;
     height: 175px;
@@ -20,32 +23,70 @@
     font-weight: 700;
     font-size: 14px;
     margin-top: 16px;
-    padding-left: 75px;
-    padding-right: 27px;
-    @media (max-width: 720px) {
-        font-size: 12px;
-        padding-left: 55px;
-        padding-right: 20px;
-    }
+    padding: 0 10px;
 }
 
-@media (max-width: 720px) {
-    .bottom {
-        font-size: 12px;
-        padding-left: 55px;
-        padding-right: 20px;
-    }
+@media (max-width: 800px) {
+    // .bottom {
+    //     font-size: 10px;
+    //     padding-left: 55px;
+    //     padding-right: 20px;
+    // }
 
     .left {
         font-size: 12px;
     }
     .chart {
-        font-size: 10px;
+        font-size: 10px !important ;
     }
 }
 
-@media (max-width: 650px) {
-    .chart {
-        display: none;
+@media (max-width: 680px) {
+    .wrapperChart {
+        overflow-x: scroll;
+        padding: 0;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        .chart {
+            max-width: 400px;
+            gap: 3px;
+            span {
+                font-size: 12px !important;
+                border-radius: 6px;
+                padding: 10px 30px;
+                transition: all 0.4s ease;
+            }
+
+            .active {
+                background-color: var(--normal);
+                color: #fff;
+            }
+        }
+    }
+    .chartBlock {
+        align-items: flex-start;
+    }
+    .left {
+        padding-top: 20px;
+    }
+    .bottom {
+        font-size: 12px;
+    }
+}
+@media (max-width: 530px) {
+    .wrapperChart {
+        .chart {
+            max-width: 300px;
+        }
+    }
+}
+@media (max-width: 390px) {
+    .wrapperChart {
+        .chart {
+            max-width: 200px;
+        }
     }
 }

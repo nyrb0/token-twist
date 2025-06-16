@@ -57,10 +57,27 @@ const About = () => {
                                         </ul>
                                     </div>
                                 </div>
+                                <div className={`${styles.descriptionMobile} df fdc`}>
+                                    <div>
+                                        <h3 style={{ color: 'var(--purple)' }}>
+                                            <span></span> Алмазное ядро
+                                        </h3>
+                                        <p>Не толпа. Не масса. Это — ударный отряд.</p>
+                                    </div>
+                                    <div style={{ marginTop: 20 }}>
+                                        <h3>
+                                            <span></span> Огненная река
+                                        </h3>
+                                        <p>Цифры, которые сжигают старый мир</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+            <div className="df jcc">
+                <Image src={monkey.src} className={`${styles.monkeyMobile} `} width={330} height={336} alt="monkey token twist" />
             </div>
         </div>
     );
