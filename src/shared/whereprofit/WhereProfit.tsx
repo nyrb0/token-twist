@@ -20,7 +20,7 @@ const WhereProfit = () => {
 
     const handleSlide = (index: number) => {
         if (swiperRef.current) {
-            swiperRef.current.slideTo(index);
+            swiperRef.current.slideToLoop(index);
             setIsActive(index);
         }
     };
