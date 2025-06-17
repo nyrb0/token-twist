@@ -133,6 +133,14 @@ a {
     text-decoration: none;
     color: #ffff;
 }
+svg,
+button,
+a,
+div {
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+}
+
 button {
     background-color: transparent;
     border: none;

@@ -56,10 +56,10 @@
         }
 
         .result {
+            width: 100%;
             @media (max-width: 1000px) {
                 justify-content: center;
             }
-            width: 100%;
             .chart {
                 position: relative;
                 margin-top: 16px;
