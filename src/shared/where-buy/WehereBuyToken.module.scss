@@ -50,9 +50,22 @@
             .wrapperBlock {
                 width: 100%;
             }
+            .car {
+                position: relative;
+                z-index: 5;
+            }
             @media (max-width: 900px) {
                 .arrowBottom {
                     display: flex;
+
+                    svg {
+                        position: relative;
+                        z-index: -1;
+                    }
+                    .cir {
+                        position: relative;
+                        z-index: 1;
+                    }
                 }
                 overflow-x: scroll;
                 scrollbar-width: none;

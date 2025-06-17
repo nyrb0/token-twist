@@ -19,7 +19,8 @@
     "recharts": "^2.15.3",
     "sass": "^1.89.2",
     "styled-components": "^6.1.18",
-    "swiper": "^11.2.8"
+    "swiper": "^11.2.8",
+    "use-debounce": "^10.0.5"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

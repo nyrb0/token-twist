@@ -98,7 +98,9 @@ const WhereBuyToken = () => {
                                             </span>
                                         </div>
                                     )}
-                                    <CardHowBuy description={item.description} icon={item.icon} title={item.title} />
+                                    <div className={styles.car}>
+                                        <CardHowBuy description={item.description} icon={item.icon} title={item.title} />
+                                    </div>
                                     {!idx && (
                                         <div className={`${styles.arrowBottom} df fdc aic`} style={{ transform: 'translateY(-12px)' }}>
                                             <span style={{ transform: 'translateY(5px)' }}>
@@ -109,6 +111,7 @@ const WhereBuyToken = () => {
                                                     />
                                                 </svg>
                                             </span>
+
                                             <Circle type={1} number={3} />
                                         </div>
                                     )}
