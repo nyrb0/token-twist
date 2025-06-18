@@ -1,7 +1,7 @@
 import styles from './WehereBuyToken.module.scss';
 
 interface ICircle {
-    type: 1 | 2;
+    type?: 1 | 2;
     number: number;
 }
 const Circle = ({ number, type }: ICircle) => {

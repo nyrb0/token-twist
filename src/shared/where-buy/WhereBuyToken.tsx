@@ -11,9 +11,10 @@ import Circle from './Circle';
 import IconArrow from './Icons/IconArrow';
 import { Button } from '../UI/button/Button';
 import IconLineDash from './Icons/IconLineDash';
-
 import { motion, useInView } from 'framer-motion';
 import { useWindowSize } from '../hooks/useWindowSize';
+
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 const cards = [
     {
@@ -45,7 +46,7 @@ const WhereBuyToken = () => {
     const isInView = useInView(ref, { once: true, amount: 0.5 }); // once — анимация только один раз
     const isViewCard = useInView(ref, { once: true, amount: 0.5 }); // once — анимация только один раз
     const step = useInView(refStep, { once: true, amount: 0.5 }); // once — анимация только один раз
-    const size = useWindowSize() ?? 0;
+    const size = useWindowSize()!;
     return (
         <div ref={ref} className={`${styles.where} df`} id="buy-token">
             <div className={styles.sideLeft}>
@@ -72,7 +73,7 @@ const WhereBuyToken = () => {
                     </div>
                 </div>
 
-                <div className={`${size <= 900 ? '' : 'container'} `}>
+                <div className={`${size < 900 ? '' : 'container'}`}>
                     <motion.div
                         ref={refCard}
                         className={`${styles.cards} df jcsb`}

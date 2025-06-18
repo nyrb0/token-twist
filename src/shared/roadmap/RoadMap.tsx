@@ -11,6 +11,7 @@ import IconArrowBlue from './images/IconBlueArrow.svg';
 import IconArrowPurble from './images/IconPurpleArrow.svg';
 import Monkey from './images/monkey.png';
 import { motion } from 'framer-motion';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 const RoadMap = () => {
     return (
@@ -112,54 +113,65 @@ const RoadMap = () => {
                 </div>
             </div>
             <div className={styles.mobile}>
-                <div className={`${styles.wrapperMobile} df jcsb`}>
-                    <RoadmapCard
-                        delay={0.2}
-                        variant={1}
-                        lists={[
-                            'Бриджинг токена в другие сети',
-                            'Запуск метавселенной TokenTwist',
-                            `Попытка CEX-листинга 
+                <div className={styles.wrapperMobile}>
+                    <Swiper style={{ paddingLeft: 20 }} loop={true} slidesPerView={3} spaceBetween={160}>
+                        <SwiperSlide>
+                            <RoadmapCard
+                                delay={0.2}
+                                variant={1}
+                                lists={[
+                                    'Бриджинг токена в другие сети',
+                                    'Запуск метавселенной TokenTwist',
+                                    `Попытка CEX-листинга 
             (Binance, OKX и т.д.)`,
-                            'Глобальный мем-хайп',
-                        ]}
-                        title="Империя Сообщества"
-                    />
-                    <RoadmapCard
-                        delay={1}
-                        variant={2}
-                        lists={[
-                            'Конкурсы мемов и фан-контента',
-                            'Подключение инфлюенсеров и мемеров',
-                            'Запуск на DEX (Uniswap и др.)',
-                            'DAO — сообщество решает, куда двигаться дальше',
-                        ]}
-                        title="Вирусный взлет"
-                    />
-                    <RoadmapCard
-                        delay={2}
-                        variant={3}
-                        lists={[
-                            'Бриджинг токена в другие сети',
-                            'Запуск метавселенной TokenTwist',
-                            `Попытка CEX-листинга
+                                    'Глобальный мем-хайп',
+                                ]}
+                                title="Империя Сообщества"
+                            />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <RoadmapCard
+                                delay={1}
+                                variant={2}
+                                lists={[
+                                    'Конкурсы мемов и фан-контента',
+                                    'Подключение инфлюенсеров и мемеров',
+                                    'Запуск на DEX (Uniswap и др.)',
+                                    'DAO — сообщество решает, куда двигаться дальше',
+                                ]}
+                                title="Вирусный взлет"
+                            />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <RoadmapCard
+                                delay={2}
+                                variant={3}
+                                lists={[
+                                    'Бриджинг токена в другие сети',
+                                    'Запуск метавселенной TokenTwist',
+                                    `Попытка CEX-листинга
                                 (Binance, OKX и т.д.)`,
-                            'Глобальный мем-хайп',
-                        ]}
-                        title="Империя Сообщества"
-                    />
-                    <RoadmapCard
-                        delay={3}
-                        variant={4}
-                        lists={[
-                            'Листинг на CoinGecko и CoinMarketCap',
-                            'Мини-игра «Twist & Win» с наградами в токенах',
-                            'DAO — сообщество решает, куда двигаться дальше',
-                            'Дроп фирменного мерча (одежда, стикеры, бананы?)',
-                        ]}
-                        title="Полезность & Комьюнити"
-                    />
+                                    'Глобальный мем-хайп',
+                                ]}
+                                title="Империя Сообщества"
+                            />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <RoadmapCard
+                                delay={3}
+                                variant={4}
+                                lists={[
+                                    'Листинг на CoinGecko и CoinMarketCap',
+                                    'Мини-игра «Twist & Win» с наградами в токенах',
+                                    'DAO — сообщество решает, куда двигаться дальше',
+                                    'Дроп фирменного мерча (одежда, стикеры, бананы?)',
+                                ]}
+                                title="Полезность & Комьюнити"
+                            />
+                        </SwiperSlide>
+                    </Swiper>
                 </div>
+
                 <div className="df jcc">
                     <Image className={styles.monkeyMobile} src={Monkey} width={330} height={312} alt="twist token" />
                 </div>

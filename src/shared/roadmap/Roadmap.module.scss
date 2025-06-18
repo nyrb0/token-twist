@@ -120,16 +120,9 @@
         }
         .mobile {
             display: block;
+            overflow: hidden;
             .wrapperMobile {
-                padding-left: 10px;
-                overflow-x: scroll;
-                gap: 32px;
-                scrollbar-width: none;
-                -ms-overflow-style: none;
-
-                &::-webkit-scrollbar {
-                    display: none;
-                }
+                width: 750px;
             }
         }
     }
