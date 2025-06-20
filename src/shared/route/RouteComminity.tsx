@@ -16,7 +16,7 @@ const RouteComminity = () => {
 
     const routes = () => {
         if (navigation2 === 'Соц-сети') return 'КОМЬЮНИТИ';
-        if (navigation2 === 'Амабасдор') return 'Кто это такой? ';
+        if (navigation2 === 'Амбасадор') return 'Кто это такой? ';
         if (navigation2 === 'Отзывы') return 'А вот и отзывы наших ребят';
     };
 
