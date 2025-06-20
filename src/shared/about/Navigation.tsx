@@ -2,7 +2,8 @@ import styles from './About.module.scss';
 interface INavigation {
     links: string[];
     value: string;
-    onChange: (value: string) => void;
+
+    onChange: (value: any) => void;
 }
 
 const Navigation = ({ links, value, onChange }: INavigation) => {
