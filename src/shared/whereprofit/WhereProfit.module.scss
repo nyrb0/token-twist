@@ -28,7 +28,7 @@
         .monkey {
             position: absolute;
             bottom: -90px;
-            left: 10px;
+            left: -10px;
             z-index: 1;
             height: auto;
             @media (max-width: 1170px) {
@@ -105,8 +105,11 @@
             .mobile {
                 margin-top: 30px;
                 display: flex;
-                width: 800px;
+                width: 1000px;
                 gap: 16px;
+                @media (max-width: 400px) {
+                    width: 800px;
+                }
             }
         }
 
@@ -162,7 +165,7 @@
     @media (max-width: 970px) {
         min-width: 360px;
     }
-    @media (max-width: 390px) {
+    @media (max-width: 400px) {
         max-width: 360px;
         min-width: 300px;
     }

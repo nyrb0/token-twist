@@ -4,92 +4,68 @@ import IconArrowHeader from './icon/IconArrowHeader';
 import { scroller } from 'react-scroll';
 
 const Header = () => {
-    const handleScroll = (id: string) => {
-        scroller.scrollTo(id, {
-            durations: 4000,
-            delay: 0,
-            smooth: 0,
-            offset: -100,
+    const handleScroll = (sectin: string) => {
+        scroller.scrollTo(sectin, {
+            smooth: true,
+            duration: 1000,
         });
     };
+
     const [index, setIndex] = React.useState<null | number>(null);
 
     return (
         <header className={`${styles.header} df aic jcc`}>
-            <ul className={`${styles.ul} df aic jcsa`}>
+            <ul className={`${styles.navigations} df aic jcsa`}>
                 <li onClick={() => handleScroll('home')}>
-                    <div className={styles.wrapper}>
-                        <span>Главная</span>
-                        <div className={styles.border}></div>
-                    </div>
+                    <span>Главная</span>
+                    <div className={styles.border}></div>
                 </li>
-                <li onMouseEnter={() => setIndex(0)} onMouseLeave={() => setIndex(null)} onClick={() => handleScroll('about')}>
-                    <div className={styles.wrapper}>
+                <div className={styles.wrapper}>
+                    <li onClick={() => handleScroll('nav_1')}>
                         <span className="df aic">
                             О нас <IconArrowHeader />
                         </span>
                         <div className={styles.border}></div>
+                    </li>
+                    <div className={`${styles.drop} df fdc aic`} style={{ right: -50 }}>
+                        <div>
+                            Соц-сети <div className={styles.border}></div>
+                        </div>
+                        <div>
+                            Амбасадор <div className={styles.border}></div>
+                        </div>
+                        <div>
+                            Отзывы <div className={styles.border}></div>
+                        </div>
                     </div>
-                    <ul className={`${styles.select} ${index === 0 && styles.activeSelect} ${styles.about} df fdc jcsb aic`}>
-                        <li>
-                            <div>
-                                <span>О компании</span>
-                                <div className={styles.border}></div>
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <span>Токеномика</span>
-                                <div className={styles.border}></div>
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <span>RoadMap</span>
-                                <div className={styles.border}></div>
-                            </div>
-                        </li>
-                    </ul>
-                </li>
+                </div>
                 <li onClick={() => handleScroll('buy-token')}>
-                    <div className={styles.wrapper}>
-                        <span>Как купить?</span>
-                        <div className={styles.border}></div>
-                    </div>
+                    <span>Как купить?</span>
+                    <div className={styles.border}></div>
                 </li>
-                <li onMouseEnter={() => setIndex(1)} onMouseLeave={() => setIndex(null)} onClick={() => handleScroll('community')}>
-                    <div className={styles.wrapper}>
+                <div className={styles.wrapper}>
+                    <li onClick={() => handleScroll('nav_2')}>
                         <span className="df aic">
                             Наше комьнити <IconArrowHeader />
                         </span>
                         <div className={styles.border}></div>
+                    </li>
+                    <div className={`${styles.drop} df fdc aic`} style={{ right: 18 }}>
+                        <div>
+                            О компании
+                            <div className={styles.border}></div>
+                        </div>
+                        <div>
+                            Токеномика <div className={styles.border}></div>
+                        </div>
+                        <div>
+                            RoadMap <div className={styles.border}></div>
+                        </div>
                     </div>
-                    <ul className={`${styles.select} ${styles.community} ${index === 1 && styles.activeSelect}  df fdc jcsb aic`}>
-                        <li>
-                            <div>
-                                <span>Соц-сети</span>
-                                <div className={styles.border}></div>
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <span>Амбасадор</span>
-                                <div className={styles.border}></div>
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <span>Отзывы</span>
-                                <div className={styles.border}></div>
-                            </div>
-                        </li>
-                    </ul>
-                </li>
+                </div>
                 <li onClick={() => handleScroll('questions')}>
-                    <div className={styles.wrapper}>
-                        <span>Вопросы?</span>
-                        <div className={styles.border}></div>
-                    </div>
+                    <span>Вопросы?</span>
+                    <div className={styles.border}></div>
                 </li>
             </ul>
         </header>

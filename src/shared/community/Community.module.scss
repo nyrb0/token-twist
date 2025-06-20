@@ -114,6 +114,11 @@
         margin-top: 32px;
         height: 54px;
     }
+    .link {
+        &:hover {
+            scale: 1.03;
+        }
+    }
 
     @media (max-width: 1500px) {
         padding: 22px 22px 10px 22px;

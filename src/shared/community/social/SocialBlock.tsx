@@ -45,7 +45,9 @@ const SocialBlock = ({ descs, title, strong, icon, href }: ISocialBlock) => {
             </div>
 
             <Link href={href}>
-                <Button variant={icon === 'tg' || icon === 'tiktok' ? 'primary' : 'purble'}>Присоединиться</Button>
+                <Button className={styles.link} variant={'purble'}>
+                    Присоединиться
+                </Button>
             </Link>
         </div>
     );

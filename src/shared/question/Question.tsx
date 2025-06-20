@@ -42,7 +42,7 @@ const options = [
 
 const Question = () => {
     return (
-        <div className={`${styles.faq} df`} id="questions">
+        <div className={`${styles.faq} df`}>
             <Image className={styles.monkey} src={Monkey.src} width={100} height={100} alt="monkey token twist" />
             <section className="container">
                 <div className={styles.questions}>

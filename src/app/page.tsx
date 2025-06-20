@@ -11,13 +11,21 @@ export default function Home() {
         <>
             <Hero />
             <Hr type={'coin'} />
-            <RouteAbout />
+            <div id="nav_1">
+                <RouteAbout />
+            </div>
             <Hr type={'buy'} />
-            <WhereBuyToken />
+            <div id="buy-token">
+                <WhereBuyToken />
+            </div>
             <Hr type={'buy'} />
-            <RouteComminity />
+            <div id="nav_2">
+                <RouteComminity />
+            </div>
             <Hr type={'community'} />
-            <Question />
+            <div id="questions">
+                <Question />
+            </div>
             <Hr type={'question'} />
             <Footer />
         </>

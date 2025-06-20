@@ -81,6 +81,11 @@
                     z-index: 999;
                     clip-path: inset(0 0 73px 0);
                 }
+                @media (max-width: 1500px) {
+                    .monkey {
+                        clip-path: inset(0 0 86px 0);
+                    }
+                }
 
                 @media (max-width: 1100px) {
                     .monkey {

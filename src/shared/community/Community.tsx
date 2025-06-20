@@ -11,7 +11,7 @@ const Community = () => {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, amount: 0.3 });
     return (
-        <div ref={ref} className={`${styles.community} df`} id="community">
+        <div ref={ref} className={`${styles.community} df`}>
             <div className={styles.sideLeft}>
                 <motion.svg
                     ref={ref}
@@ -20,8 +20,8 @@ const Community = () => {
                     viewBox="0 0 200 1088"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
-                    initial={{ scaleY: 0, opacity: 0 }}
-                    animate={isInView ? { scaleY: 1, opacity: 1 } : {}}
+                    initial={{ opacity: 0, clipPath: 'inset(0% 0% 100% 0%)' }}
+                    animate={isInView ? { clipPath: 'inset(0% 0% 0% 0%)', opacity: 1 } : {}}
                     transition={{ duration: 1.8, ease: 'easeInOut' }}
                     style={{ transformOrigin: 'top' }}
                 >
@@ -92,8 +92,8 @@ const Community = () => {
                     viewBox="0 0 200 1088"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
-                    initial={{ scaleY: 0, opacity: 0 }}
-                    animate={isInView ? { scaleY: 1, opacity: 1 } : {}}
+                    initial={{ opacity: 0, clipPath: 'inset(0% 0% 100% 0%)' }}
+                    animate={isInView ? { clipPath: 'inset(0% 0% 0% 0%)', opacity: 1 } : {}}
                     transition={{ duration: 1.8, ease: 'easeInOut' }}
                     style={{ transformOrigin: 'top' }}
                 >

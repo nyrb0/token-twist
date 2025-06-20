@@ -48,7 +48,7 @@ const WhereBuyToken = () => {
     const step = useInView(refStep, { once: true, amount: 0.5 }); // once — анимация только один раз
     const size = useWindowSize()!;
     return (
-        <div ref={ref} className={`${styles.where} df`} id="buy-token">
+        <div ref={ref} className={`${styles.where} df`}>
             <div className={styles.sideLeft}>
                 <motion.svg
                     ref={ref}
@@ -57,8 +57,8 @@ const WhereBuyToken = () => {
                     viewBox="0 0 200 1088"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
-                    initial={{ scaleY: 0, opacity: 0 }}
-                    animate={isInView ? { scaleY: 1, opacity: 1 } : {}}
+                    initial={{ opacity: 0, clipPath: 'inset(0% 0% 100% 0%)' }}
+                    animate={isInView ? { clipPath: 'inset(0% 0% 0% 0%)', opacity: 1 } : {}}
                     transition={{ duration: 1.8, ease: 'easeInOut' }}
                     style={{ transformOrigin: 'top' }}
                 >
@@ -94,7 +94,7 @@ const WhereBuyToken = () => {
                                                 {idx && (
                                                     <div className={`${styles.arrowBottom} df fdc aic`} style={{ transform: 'translateY(12px)' }}>
                                                         <Circle type={1} number={i + 1} />
-                                                        <span style={{ transform: 'translateY(-5px)' }}>
+                                                        <span style={{ transform: 'translateY(-3px)' }}>
                                                             <svg
                                                                 width="12"
                                                                 height="72"
@@ -230,8 +230,8 @@ const WhereBuyToken = () => {
                     viewBox="0 0 200 1088"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
-                    initial={{ scaleY: 0, opacity: 0 }}
-                    animate={isInView ? { scaleY: 1, opacity: 1 } : {}}
+                    initial={{ opacity: 0, clipPath: 'inset(0% 0% 100% 0%)' }}
+                    animate={isInView ? { clipPath: 'inset(0% 0% 0% 0%)', opacity: 1 } : {}}
                     transition={{ duration: 1.8, ease: 'easeInOut' }}
                     style={{ transformOrigin: 'top' }}
                 >
