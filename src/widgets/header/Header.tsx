@@ -1,12 +1,11 @@
-import React from 'react';
 import styles from './Header.module.scss';
 import IconArrowHeader from './icon/IconArrowHeader';
 import { scroller } from 'react-scroll';
 import { useNavationStore } from '@/app/store/navigation';
 
 const Header = () => {
-    const { navigation1, setNavigation1 } = useNavationStore();
-    const { navigation2, setNavigation2 } = useNavationStore();
+    const { setNavigation1 } = useNavationStore();
+    const { setNavigation2 } = useNavationStore();
 
     const handleScroll = (sectin: string, routeLink?: any) => {
         if (sectin === 'nav_1') {
@@ -51,7 +50,7 @@ const Header = () => {
                         </div>
                     </div>
                 </div>
-                <li>
+                <li onClick={() => handleScroll('buy-token')}>
                     <span>Как купить?</span>
                     <div className={styles.border}></div>
                 </li>
