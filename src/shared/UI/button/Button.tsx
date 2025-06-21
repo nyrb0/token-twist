@@ -8,7 +8,7 @@ type ButtonProps = {
     className?: string;
 } & React.ButtonHTMLAttributes<HTMLButtonElement>;
 
-export const Button: React.FC<ButtonProps> = ({ children, variant = 'primary', className = '', ...props }) => {
+export const Button: React.FC<ButtonProps> = ({ children, type = 'button', variant = 'primary', className = '', ...props }) => {
     const variants = () => {
         if (variant === 'white') return styles.btn_white;
         else if (variant === 'secondary') return styles.btn_secondary;
@@ -16,7 +16,7 @@ export const Button: React.FC<ButtonProps> = ({ children, variant = 'primary', c
         else return styles.btn_primary;
     };
     return (
-        <button className={`${styles.btn} ${variants()} ${className}`} {...props}>
+        <button className={`${styles.btn} ${variants()} ${className}`} type={type} {...props}>
             {children}
         </button>
     );
