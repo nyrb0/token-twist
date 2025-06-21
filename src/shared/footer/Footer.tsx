@@ -44,7 +44,7 @@ const Footer = () => {
                                 <button onClick={() => handleScroll('nav_2', 'Амбасадор')}>Наш Амбасадор</button>
                                 <button onClick={() => handleScroll('nav_2', 'Отзывы')}>Отзыв</button>
                             </div>
-                            <button onClick={() => handleScroll('questions')}>FOQ</button>
+                            <button onClick={() => handleScroll('questions')}>FAQ</button>
                         </div>
                     </div>
                     <div className="df jcc">
@@ -57,34 +57,34 @@ const Footer = () => {
                             <button onClick={() => handleScroll('nav_2', 'Соц-сети')}>Соц-сети</button>
                             <button onClick={() => handleScroll('nav_2', 'Амбасадор')}>Наш Амбасадор</button>
                             <button onClick={() => handleScroll('nav_2', 'Отзывы')}>Отзыв</button>
-                            <button onClick={() => handleScroll('questions')}>FOQ</button>
+                            <button onClick={() => handleScroll('questions')}>FAQ</button>
                         </div>
                     </div>
 
                     <div className={`${styles.socials} df jcsa `}>
                         <div>
-                            <div className={styles.social}>
+                            <div className={styles.social} style={{ color: '#6C52E8' }}>
                                 <IconDiscord />
                                 Discord
                             </div>
                             <div className={styles.border}></div>
                         </div>
                         <div>
-                            <div className={styles.social}>
+                            <div className={styles.social} style={{ color: '#69A0EA' }}>
                                 <IconTelegtam />
                                 Telegram
                             </div>
                             <div className={styles.border}></div>
                         </div>
                         <div>
-                            <div className={styles.social}>
+                            <div className={styles.social} style={{ color: '#000000' }}>
                                 <IconTiktok />
                                 TikTok
                             </div>
                             <div className={styles.border}></div>
                         </div>
                         <div>
-                            <div className={styles.social}>
+                            <div className={styles.social} style={{ color: '#608CE6' }}>
                                 <IconTwitter />
                                 Twitter
                             </div>

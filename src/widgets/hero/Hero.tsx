@@ -4,7 +4,6 @@ import Board from './images/board.png';
 import styles from './Hero.module.scss';
 import InfoBoard from './InfoBoard';
 import ChatLoop from '@/shared/UI/chats/ChatsLoop';
-// import Monkey from './images/monkey.png';
 import Monkey from './images/2 212.svg';
 import Header from '../header/Header';
 import { motion } from 'framer-motion';
@@ -15,7 +14,7 @@ const Hero = () => {
     const [visible, setVisible] = useState(false);
     return (
         <div className={styles.hero} id="home">
-            <div className="container" style={{ marginTop: 20 }}>
+            <div className="container">
                 <Header />
             </div>
 

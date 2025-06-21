@@ -5,7 +5,9 @@
     background-color: #cbcbcb;
     min-height: 1100px;
     header {
+        margin-top: 20px;
         @media (max-width: 950px) {
+            margin-top: 0;
             display: none;
         }
     }
