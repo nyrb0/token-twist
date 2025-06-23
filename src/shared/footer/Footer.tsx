@@ -49,7 +49,7 @@ const Footer = () => {
                     </div>
                     <div className="df jcc">
                         <div className={`${styles.mobileNavigations} ${styles.navigations} df fdc `}>
-                            <button>Главная</button>
+                            <button onClick={() => handleScroll('home')}>Главная</button>
                             <button onClick={() => handleScroll('nav_1', 'О компании')}>О нас</button>
                             <button onClick={() => handleScroll('nav_1', 'Токеномика')}>Токеномика</button>
                             <button onClick={() => handleScroll('nav_1', 'RoadMap')}>RoadMap</button>

@@ -2,10 +2,13 @@ import styles from './Header.module.scss';
 import IconArrowHeader from './icon/IconArrowHeader';
 import { scroller } from 'react-scroll';
 import { useNavationStore } from '@/app/store/navigation';
+import { useScrollDirection } from '@/shared/hooks/useScrollDirection';
+import { motion } from 'framer-motion';
 
 const Header = () => {
     const { setNavigation1 } = useNavationStore();
     const { setNavigation2 } = useNavationStore();
+    const scrollDirection = useScrollDirection();
 
     const handleScroll = (sectin: string, routeLink?: any) => {
         if (sectin === 'nav_1') {
@@ -24,7 +27,12 @@ const Header = () => {
     };
 
     return (
-        <header className={`${styles.header} df aic jcc`}>
+        <motion.header
+            className={`${styles.header} df aic jcc `}
+            initial={{ y: 0 }}
+            animate={{ y: scrollDirection === 'down' ? -100 : 0 }}
+            transition={{ duration: 0.3 }}
+        >
             <ul className={`${styles.navigations} df aic jcsa`}>
                 <li onClick={() => handleScroll('home')}>
                     <span>Главная</span>
@@ -79,7 +87,7 @@ const Header = () => {
                     <div className={styles.border}></div>
                 </li>
             </ul>
-        </header>
+        </motion.header>
     );
 };
 
