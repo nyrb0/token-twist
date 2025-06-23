@@ -34,7 +34,9 @@ const About = () => {
                             <div className="df fdc aie">
                                 <div className={styles.chart}>
                                     <Image src={monkey.src} className={styles.monkey} width={716} height={718} alt="monkey token twist" />
-                                    <CustomChart />
+                                    <div className={styles.customChart}>
+                                        <CustomChart />
+                                    </div>
                                 </div>
 
                                 <div className={`${styles.description} df aic jcsb`}>

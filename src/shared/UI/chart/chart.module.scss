@@ -53,6 +53,7 @@
         .chart {
             max-width: 400px;
             gap: 3px;
+            padding-left: 16px;
             span {
                 font-size: 12px !important;
                 border-radius: 6px;
@@ -66,11 +67,15 @@
             }
         }
     }
+    .customChart {
+        padding-right: 8px;
+    }
     .chartBlock {
         align-items: flex-start;
     }
     .left {
         padding-top: 20px;
+        padding-left: 16px;
     }
     .bottom {
         font-size: 12px;

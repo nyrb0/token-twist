@@ -62,7 +62,6 @@
             }
             .chart {
                 position: relative;
-                margin-top: 16px;
                 max-height: 400px;
                 max-width: 827px;
                 width: 100%;
@@ -73,7 +72,7 @@
                 border-radius: 16px;
                 padding: 32px;
                 box-sizing: border-box;
-
+                margin-top: 16px;
                 .monkey {
                     position: absolute;
                     left: -645px;
@@ -105,6 +104,8 @@
                 }
                 @media (max-width: 680px) {
                     padding: 16px;
+                    padding-right: 0;
+                    padding-left: 0;
                 }
             }
 

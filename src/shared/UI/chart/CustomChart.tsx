@@ -144,7 +144,7 @@ const CustomChart = () => {
                             </div>
                         </div>
                     )}
-                    <div>
+                    <div className={styles.customChart}>
                         <CustomTooltip hovered={hovered} data={screenSize >= 680 ? data : mobileData[index]} />
                         <ResponsiveContainer width="100%" height={screenSize > 680 ? 280 : 246}>
                             <BarChart data={screenSize >= 680 ? data : mobileData[index]} barCategoryGap="0%">
