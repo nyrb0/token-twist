@@ -55,7 +55,7 @@
     .mon {
         display: none;
     }
-    @media (max-width: 570px) {
+    @media (max-width: 850px) {
         .mobile {
             padding-top: 64px;
             display: block;
@@ -214,10 +214,11 @@
             z-index: 9;
         }
         .monkeyMobile {
+            position: absolute;
             left: 50px;
             top: -12px;
             z-index: 1;
-            position: absolute;
+            clip-path: inset(10px 0 0 0);
         }
     }
     @media (max-width: 850px) {

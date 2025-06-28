@@ -15,6 +15,7 @@
         bottom: -150px;
     }
     .background {
+        clip-path: inset(0 0 0 1200px);
         width: 200vw;
         height: 100%;
         position: absolute;
