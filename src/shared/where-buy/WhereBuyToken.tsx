@@ -59,7 +59,7 @@ const WhereBuyToken = () => {
                     xmlns="http://www.w3.org/2000/svg"
                     initial={{ opacity: 0, clipPath: 'inset(0% 0% 100% 0%)' }}
                     animate={isInView ? { clipPath: 'inset(0% 0% 0% 0%)', opacity: 1 } : {}}
-                    transition={{ duration: 1.8, ease: 'easeInOut' }}
+                    transition={{ duration: 1.6, ease: 'easeInOut' }}
                     style={{ transformOrigin: 'top' }}
                 >
                     <path d="M77.6253 0H0V909H200L77.6253 0Z" fill="black" />
@@ -232,7 +232,7 @@ const WhereBuyToken = () => {
                     xmlns="http://www.w3.org/2000/svg"
                     initial={{ opacity: 0, clipPath: 'inset(0% 0% 100% 0%)' }}
                     animate={isInView ? { clipPath: 'inset(0% 0% 0% 0%)', opacity: 1 } : {}}
-                    transition={{ duration: 1.8, ease: 'easeInOut' }}
+                    transition={{ duration: 1.6, ease: 'easeInOut' }}
                     style={{ transformOrigin: 'top' }}
                 >
                     <path d="M122.375 0H200V909H0L122.375 0Z" fill="black" />

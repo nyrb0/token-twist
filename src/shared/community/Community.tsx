@@ -22,7 +22,7 @@ const Community = () => {
                     xmlns="http://www.w3.org/2000/svg"
                     initial={{ opacity: 0, clipPath: 'inset(0% 0% 100% 0%)' }}
                     animate={isInView ? { clipPath: 'inset(0% 0% 0% 0%)', opacity: 1 } : {}}
-                    transition={{ duration: 1.8, ease: 'easeInOut' }}
+                    transition={{ duration: 1.3, ease: 'easeInOut' }}
                     style={{ transformOrigin: 'top' }}
                 >
                     <path d="M77.6253 1088H0V0H200L77.6253 1088Z" fill="black" />
@@ -94,7 +94,7 @@ const Community = () => {
                     xmlns="http://www.w3.org/2000/svg"
                     initial={{ opacity: 0, clipPath: 'inset(0% 0% 100% 0%)' }}
                     animate={isInView ? { clipPath: 'inset(0% 0% 0% 0%)', opacity: 1 } : {}}
-                    transition={{ duration: 1.8, ease: 'easeInOut' }}
+                    transition={{ duration: 1.3, ease: 'easeInOut' }}
                     style={{ transformOrigin: 'top' }}
                 >
                     <path d="M122.375 1088H200V0H0L122.375 1088Z" fill="black" />
