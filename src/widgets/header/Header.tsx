@@ -27,67 +27,71 @@ const Header = () => {
     };
 
     return (
-        <motion.header
-            className={`${styles.header} df aic jcc `}
+        <motion.div
+            style={{ position: 'fixed', top: 0, left: 0, width: '100%', zIndex: 99999 }}
             initial={{ y: 0 }}
             animate={{ y: scrollDirection === 'down' ? -100 : 0 }}
             transition={{ duration: 0.3 }}
         >
-            <ul className={`${styles.navigations} df aic jcsa`}>
-                <li onClick={() => handleScroll('home')}>
-                    <span>Главная</span>
-                    <div className={styles.border}></div>
-                </li>
-                <div className={styles.wrapper}>
-                    <li>
-                        <span className="df aic">
-                            О нас <IconArrowHeader />
-                        </span>
-                        <div className={styles.border}></div>
-                    </li>
-                    <div className={`${styles.drop} df fdc aic`} style={{ right: -50 }}>
-                        <div onClick={() => handleScroll('nav_1', 'О компании')}>
-                            О компании
+            <div className="container">
+                <motion.header className={`${styles.header} df aic jcc `}>
+                    <ul className={`${styles.navigations} df aic jcsa`}>
+                        <li onClick={() => handleScroll('home')}>
+                            <span>Главная</span>
                             <div className={styles.border}></div>
+                        </li>
+                        <div className={styles.wrapper}>
+                            <li>
+                                <span className="df aic">
+                                    О нас <IconArrowHeader />
+                                </span>
+                                <div className={styles.border}></div>
+                            </li>
+                            <div className={`${styles.drop} df fdc aic`} style={{ right: -50 }}>
+                                <div onClick={() => handleScroll('nav_1', 'О компании')}>
+                                    О компании
+                                    <div className={styles.border}></div>
+                                </div>
+                                <div onClick={() => handleScroll('nav_1', 'Токеномика')}>
+                                    Токеномика <div className={styles.border}></div>
+                                </div>
+                                <div onClick={() => handleScroll('nav_1', 'RoadMap')}>
+                                    RoadMap <div className={styles.border}></div>
+                                </div>
+                            </div>
                         </div>
-                        <div onClick={() => handleScroll('nav_1', 'Токеномика')}>
-                            Токеномика <div className={styles.border}></div>
-                        </div>
-                        <div onClick={() => handleScroll('nav_1', 'RoadMap')}>
-                            RoadMap <div className={styles.border}></div>
-                        </div>
-                    </div>
-                </div>
-                <li onClick={() => handleScroll('buy-token')}>
-                    <span>Как купить?</span>
-                    <div className={styles.border}></div>
-                </li>
-                <div className={styles.wrapper}>
-                    <li>
-                        <span className="df aic">
-                            Наше комьнити <IconArrowHeader />
-                        </span>
-                        <div className={styles.border}></div>
-                    </li>
+                        <li onClick={() => handleScroll('buy-token')}>
+                            <span>Как купить?</span>
+                            <div className={styles.border}></div>
+                        </li>
+                        <div className={styles.wrapper}>
+                            <li>
+                                <span className="df aic">
+                                    Наше комьнити <IconArrowHeader />
+                                </span>
+                                <div className={styles.border}></div>
+                            </li>
 
-                    <div className={`${styles.drop} df fdc aic`} style={{ right: 18 }}>
-                        <div onClick={() => handleScroll('nav_2', 'Соц-сети')}>
-                            Соц-сети <div className={styles.border}></div>
+                            <div className={`${styles.drop} df fdc aic`} style={{ right: 18 }}>
+                                <div onClick={() => handleScroll('nav_2', 'Соц-сети')}>
+                                    Соц-сети <div className={styles.border}></div>
+                                </div>
+                                <div onClick={() => handleScroll('nav_2', 'Амбасадор')}>
+                                    Амбасадор <div className={styles.border}></div>
+                                </div>
+                                <div onClick={() => handleScroll('nav_2', 'Отзывы')}>
+                                    Отзывы <div className={styles.border}></div>
+                                </div>
+                            </div>
                         </div>
-                        <div onClick={() => handleScroll('nav_2', 'Амбасадор')}>
-                            Амбасадор <div className={styles.border}></div>
-                        </div>
-                        <div onClick={() => handleScroll('nav_2', 'Отзывы')}>
-                            Отзывы <div className={styles.border}></div>
-                        </div>
-                    </div>
-                </div>
-                <li onClick={() => handleScroll('questions')}>
-                    <span>Вопросы?</span>
-                    <div className={styles.border}></div>
-                </li>
-            </ul>
-        </motion.header>
+                        <li onClick={() => handleScroll('questions')}>
+                            <span>Вопросы?</span>
+                            <div className={styles.border}></div>
+                        </li>
+                    </ul>
+                </motion.header>
+            </div>
+        </motion.div>
     );
 };
 

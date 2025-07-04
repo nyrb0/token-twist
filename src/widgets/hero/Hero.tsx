@@ -14,11 +14,7 @@ const Hero = () => {
     const [visible, setVisible] = useState(false);
     return (
         <div className={styles.hero} id="home">
-            <div style={{ position: 'fixed', top: 0, left: 0, width: '100%', zIndex: 99999 }}>
-                <div className="container">
-                    <Header />
-                </div>
-            </div>
+            <Header />
 
             <motion.div
                 initial={{ opacity: 0 }}
