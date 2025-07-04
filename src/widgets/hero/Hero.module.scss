@@ -2,8 +2,11 @@
     position: relative;
     overflow: hidden;
     height: 100vh;
-    background-color: #cbcbcb;
-    min-height: 1100px;
+    background: url('/hero.png') no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    min-height: 830px;
     header {
         margin-top: 20px;
         @media (max-width: 950px) {
@@ -20,21 +23,31 @@
         position: absolute;
         bottom: 150px;
         left: 200px;
-        & img {
-            object-fit: contain;
-            z-index: 1;
+        .monkeyPc {
+            position: relative;
         }
         .container {
             position: relative;
             bottom: -200px;
+            & .boardImg {
+                position: relative;
+                object-fit: contain;
+                z-index: 99;
+            }
+            .monkeyPc {
+                clip-path: inset(10px 0 0 0);
+                position: absolute;
+                right: -590px;
+                z-index: 1;
+            }
             .texts {
                 position: absolute;
                 top: 250px;
                 right: 182px;
-                z-index: 2;
+                z-index: 99;
             }
         }
-        @media (max-width: 1500px) {
+        @media (max-width: 1800px) {
             transform: scale(0.8);
             left: -100px;
             bottom: -10px;
@@ -63,6 +76,7 @@
     }
     .chat {
         position: absolute;
+        z-index: 999;
         bottom: 275px;
         right: 36px;
         @media (max-width: 1500px) {

@@ -34,7 +34,9 @@ const Hero = () => {
 
             <div className={`${styles.board} df `}>
                 <div className={styles.container}>
-                    <Image src={Board.src} width={1062} height={957} alt="Доска" />
+                    <Image src={Monkey.src} className={styles.monkeyPc} width={885} height={976} alt="Доска" />
+                    <Image className={styles.boardImg} src={Board.src} width={1062} height={957} alt="Доска" />
+
                     <div className={styles.texts}>
                         <InfoBoard />
                     </div>

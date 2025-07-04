@@ -19,7 +19,7 @@ const InfoBoard = () => {
 
             <div className={`${styles.boardButton} df`}>
                 <Button variant="white" onMouseEnter={() => setVisible(true)} onMouseLeave={() => setVisible(false)}>
-                    {visible ? 'Узнать подробнее' : 'Еще сомневаешься?'}
+                    Запустить в Телеграм
                 </Button>
                 <Button>Заскочить в ракету</Button>
             </div>
