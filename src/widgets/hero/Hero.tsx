@@ -27,14 +27,15 @@ const Hero = () => {
             >
                 <ChatLoop />
             </motion.div>
+            <div className="df jcc">
+                <div className={`${styles.board} df`}>
+                    <div className={styles.container}>
+                        <Image src={Monkey.src} className={styles.monkeyPc} width={885} height={976} alt="Доска" />
+                        <Image className={styles.boardImg} src={Board.src} width={1062} height={957} alt="Доска" />
 
-            <div className={`${styles.board} df `}>
-                <div className={styles.container}>
-                    <Image src={Monkey.src} className={styles.monkeyPc} width={885} height={976} alt="Доска" />
-                    <Image className={styles.boardImg} src={Board.src} width={1062} height={957} alt="Доска" />
-
-                    <div className={styles.texts}>
-                        <InfoBoard />
+                        <div className={styles.texts}>
+                            <InfoBoard />
+                        </div>
                     </div>
                 </div>
             </div>
@@ -54,7 +55,7 @@ const Hero = () => {
                     <div className={`${styles.mobileBoard}  `}>
                         <div className={`${styles.btns} df fdc`}>
                             <Button variant="white" onMouseEnter={() => setVisible(true)} onMouseLeave={() => setVisible(false)}>
-                                {visible ? 'Узнать подробнее' : 'Еще сомневаешься?'}
+                                Запустить в Телеграм
                             </Button>
                             <Button>Заскочить в ракету</Button>
                         </div>

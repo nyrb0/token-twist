@@ -6,13 +6,16 @@
     background-size: cover;
     background-position: center;
 
-    min-height: 830px;
+    min-height: 1080px;
     header {
         margin-top: 20px;
         @media (max-width: 950px) {
             margin-top: 0;
             display: none;
         }
+    }
+    @media (max-width: 1800px) {
+        min-height: 830px;
     }
     @media (max-width: 850px) {
         min-height: 100%;
@@ -23,7 +26,8 @@
     .board {
         position: absolute;
         bottom: 150px;
-        left: 200px;
+        transform: translateX(-300px);
+        // left: 200px;
         .monkeyPc {
             position: relative;
         }
@@ -49,18 +53,19 @@
             }
         }
         @media (max-width: 1800px) {
-            transform: scale(0.8);
-            left: -100px;
+            transform: scale(0.8) translateX(-300px);
+
+            // left: -100px;
             bottom: -10px;
         }
         @media (max-width: 1200px) {
-            transform: scale(0.65);
+            transform: scale(0.65) translateX(-300px);
             bottom: -80px;
         }
         @media (max-width: 1083px) {
-            bottom: -120px;
-            left: -200px;
-            transform: scale(0.6);
+            bottom: -135px;
+            // left: -200px;
+            transform: scale(0.55) translateX(-300px);
         }
         @media (max-width: 850px) {
             display: none;
