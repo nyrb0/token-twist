@@ -21,7 +21,7 @@ const WhereProfit = () => {
         }
     }, 80);
 
-    const handleSlide = (index: number) => {
+    const handleSlide = (index: number | null) => {
         if (swiperRef.current && widthWindow <= 970) {
             swiperRef.current.slideToLoop(index);
             setIsActive(index);
@@ -73,7 +73,7 @@ const WhereProfit = () => {
                             </ProfitCard>
                         </div>
                         <div className={`${styles.circle} df jcc`}>
-                            <ScheduleCircle index={isActive} setIndex={(index) => handleSlide(index ?? 0)} />
+                            <ScheduleCircle index={isActive} setIndex={(index) => handleSlide(index === null ? null : index)} />
                         </div>
                         <div className={`${styles.right} df fdc`}>
                             <ProfitCard
