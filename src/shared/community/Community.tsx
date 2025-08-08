@@ -35,8 +35,8 @@ const Community = () => {
                 <p>Сливы, инсайды, мемы. Всё, что нужно, чтобы не остаться нубом. Информация за которую можно и душу продать) </p>
                 <div className={styles.blocks}>
                     <SocialBlock
-                        title={'Discord'}
-                        icon={'discord'}
+                        title={'Threads'}
+                        icon={'threads'}
                         strong="Твой VIP-доступ к комьюнити!"
                         descs={[
                             'Голосовые разборы токеномики и roadmap',

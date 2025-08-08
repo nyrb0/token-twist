@@ -1,7 +1,7 @@
 'use client';
 
 import { scroller } from 'react-scroll';
-import IconDiscord from '../icons/IconDiscord';
+import IconDiscord from '../icons/IconThreads';
 import IconTelegtam from '../icons/IconTelegtam';
 import IconTiktok from '../icons/IconTiktok';
 import IconTwitter from '../icons/IconTwitter';

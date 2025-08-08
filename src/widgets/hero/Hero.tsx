@@ -9,13 +9,13 @@ import Header from '../header/Header';
 import { motion } from 'framer-motion';
 import { Button } from '@/shared/UI/button/Button';
 import { useState } from 'react';
+import LanguageCompenent from './LanguageCompenent';
 
 const Hero = () => {
     const [visible, setVisible] = useState(false);
     return (
         <div className={styles.hero} id="home">
             <Header />
-
             <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -65,6 +65,9 @@ const Hero = () => {
                         </div>
                     </div>
                 </div>
+            </div>
+            <div className={`${styles.languege} df jce aic`}>
+                <LanguageCompenent />
             </div>
         </div>
     );

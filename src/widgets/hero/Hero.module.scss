@@ -102,6 +102,12 @@
             display: none;
         }
     }
+    .languege {
+        position: absolute;
+        right: 40px;
+        bottom: 40px;
+        z-index: 999;
+    }
 }
 
 .infoBoard {
@@ -251,4 +257,11 @@
     @media (max-width: 350px) {
         transform: translateY(40px);
     }
+}
+
+.componentLanguage {
+    border-radius: 8px;
+    width: 48px;
+    height: 48px;
+    background-color: var(--normal);
 }
